@@ -54,6 +54,8 @@
      <Compile Include="Assets\Scripts\LootBox\LootBox.cs" />
      <Compile Include="Assets\Scripts\Items\ItemStat.cs" />
      <Compile Include="Assets\Scripts\Player\StatsPlayer.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerIsaacStyle\PlayerIssacStyleController.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerIsaacStyle\BulletController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

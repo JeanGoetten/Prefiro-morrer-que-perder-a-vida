@@ -375,6 +375,8 @@
 "Assets/Scripts/Player/FXConstroller.cs"
 "Assets/Scripts/Player/IsometricCharacterRenderer.cs"
 "Assets/Scripts/Player/IsometricPlayerMovementController.cs"
+"Assets/Scripts/Player/PlayerIsaacStyle/BulletController.cs"
+"Assets/Scripts/Player/PlayerIsaacStyle/PlayerIssacStyleController.cs"
 "Assets/Scripts/Player/StatsPlayer.cs"
 "Assets/Scripts/UI/StatsUI.cs"
 -langversion:9.0
