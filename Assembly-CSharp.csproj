@@ -36,26 +36,30 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\UI\SpeechController.cs" />
      <Compile Include="Assets\Scripts\Manager\LoadScene.cs" />
      <Compile Include="Assets\Scripts\Adventure\BasicCameraFollow.cs" />
-     <Compile Include="Assets\Scripts\Player\IsometricPlayerMovementController.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerLikeDontStarve\IsometricPlayerMovementController.cs" />
      <Compile Include="Assets\Scripts\UI\StatsUI.cs" />
      <Compile Include="Assets\Scripts\Bag\Inventory.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerIsaacStyle\PlayerIssacStyleController.cs" />
+     <Compile Include="Assets\Scripts\Mimic\MimicSpawn.cs" />
      <Compile Include="Assets\Scripts\Bag\Spawn.cs" />
-     <Compile Include="Assets\Scripts\Player\IsometricCharacterRenderer.cs" />
-     <Compile Include="Assets\Scripts\Player\FXConstroller.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerLikeDontStarve\IsometricCharacterRenderer.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerLikeDontStarve\FXConstroller.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerIsaacStyle\BulletController.cs" />
      <Compile Include="Assets\Scripts\Adventure\HideTilemapColliderOnPlay.cs" />
      <Compile Include="Assets\Scripts\Adventure\CharacterStat.cs" />
+     <Compile Include="Assets\Scripts\Mimic\MimicTalk.cs" />
      <Compile Include="Assets\Scripts\Adventure\StatModifier.cs" />
      <Compile Include="Assets\Scripts\Bag\Pickup.cs" />
      <Compile Include="Assets\Scripts\Bag\Slot.cs" />
      <Compile Include="Assets\Scripts\Items\ItemStat.cs" />
-     <Compile Include="Assets\Scripts\Player\StatsPlayer.cs" />
-     <Compile Include="Assets\Scripts\Mimic\MimicSpawn.cs" />
-     <Compile Include="Assets\Scripts\Mimic\MimicTalk.cs" />
-     <Compile Include="Assets\Scripts\UI\SpeechController.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerLikeDontStarve\StatsPlayer.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerWithWeapon\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerWithWeapon\PlayerAction.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerWithWeapon\WeaponAtMouse.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerWithWeapon\Shooting.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
