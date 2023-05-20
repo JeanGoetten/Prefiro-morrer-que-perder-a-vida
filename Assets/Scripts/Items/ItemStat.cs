@@ -14,9 +14,9 @@ public class ItemStat : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     public float statsModifierPower = .01f; 
     [SerializeField]
-    public float statsModifierHungry = .01f; 
+    public float statsModifierSpeed = .01f; 
     [SerializeField]
-    public float statsModifierGold = .01f; 
+    public float statsModifierScore = .01f; 
     
     [Header("Modifier Type")]
     [SerializeField]
@@ -29,11 +29,11 @@ public class ItemStat : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     public bool powerStat; 
     [SerializeField]
-    public bool hungryStat; 
+    public bool speedStat; 
     [SerializeField]
-    public bool goldStat;
+    public bool scoreStat;
     [SerializeField]
-    public float goldValue = .01f;  
+    public float scoreValue = 0f;  
     //Mouse events
     public UnityEvent leftClick;
     //public UnityEvent middleClick; //(if use middle mouse button)
@@ -42,8 +42,8 @@ public class ItemStat : MonoBehaviour, IPointerClickHandler
         statsPlayer = GameObject.FindWithTag("Player").GetComponent<StatsPlayer>(); 
     }
     public void DropItem(){
-        statsPlayer.gold.AddModifier(new StatModifier(goldValue, StatModType.Flat)); 
-        FXConstroller.log = "+" + goldValue.ToString() + " gold"; 
+        statsPlayer.score.AddModifier(new StatModifier(scoreValue, StatModType.Flat)); 
+        FXConstroller.log = "+" + scoreValue.ToString() + " points"; 
         Destroy(this.gameObject);
     }
     public void UseItem(){
@@ -67,20 +67,20 @@ public class ItemStat : MonoBehaviour, IPointerClickHandler
                 FXConstroller.log = statsModifierPower.ToString() + " power"; 
             }
         }
-        if(hungryStat){
-            statsPlayer.hungry.AddModifier(new StatModifier(statsModifierHungry, StatModType.Flat)); 
-            if(statsModifierHungry > 0){
-                FXConstroller.log = "+" + statsModifierHungry.ToString() + " hungry"; 
+        if(speedStat){
+            statsPlayer.speed.AddModifier(new StatModifier(statsModifierSpeed, StatModType.Flat)); 
+            if(statsModifierSpeed > 0){
+                FXConstroller.log = "+" + statsModifierSpeed.ToString() + " speed"; 
             }else{
-                FXConstroller.log = statsModifierHungry.ToString() + " hungry"; 
+                FXConstroller.log = statsModifierSpeed.ToString() + " speed"; 
             }
         }
-        if(goldStat){
-            statsPlayer.gold.AddModifier(new StatModifier(statsModifierGold, StatModType.Flat)); 
-            if(statsModifierGold > 0){
-                FXConstroller.log = "+" + statsModifierGold.ToString() + " gold"; 
+        if(scoreStat){
+            statsPlayer.score.AddModifier(new StatModifier(statsModifierScore, StatModType.Flat)); 
+            if(statsModifierScore > 0){
+                FXConstroller.log = "+" + statsModifierScore.ToString() + " score"; 
             }else{
-                FXConstroller.log = statsModifierGold.ToString() + " gold"; 
+                FXConstroller.log = statsModifierScore.ToString() + " score"; 
             }
         }
         Destroy(this.gameObject);

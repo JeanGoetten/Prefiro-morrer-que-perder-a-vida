@@ -28,7 +28,8 @@ RectTransform:
   m_GameObject: {fileID: 5608933488029482546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,6 +62,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -90,19 +92,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsModifierLife: 2
   statsModifierPower: 0.01
-  statsModifierHungry: 0.01
-  statsModifierGold: 0.01
+  statsModifierSpeed: 0.01
+  statsModifierScore: 0.01
   flat: 1
   percent: 0
   lifeStat: 1
   powerStat: 0
-  hungryStat: 0
-  goldStat: 0
-  goldValue: 0.01
+  speedStat: 0
+  scoreStat: 0
+  scoreValue: 0
   leftClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4612718610769582798}
+        m_TargetAssemblyTypeName: 
         m_MethodName: UseItem
         m_Mode: 1
         m_Arguments:
@@ -117,6 +120,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4612718610769582798}
+        m_TargetAssemblyTypeName: 
         m_MethodName: DropItem
         m_Mode: 1
         m_Arguments:

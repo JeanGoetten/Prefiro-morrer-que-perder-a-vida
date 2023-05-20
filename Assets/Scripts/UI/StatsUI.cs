@@ -8,14 +8,14 @@ public class StatsUI : MonoBehaviour
     private StatsPlayer statsPlayer; 
     public Slider life; 
     public Slider power; 
-    public Slider hungry; 
+    public Slider speed; 
     void Start()
     {
         statsPlayer = GameObject.FindWithTag("Player").GetComponent<StatsPlayer>(); 
 
         life.maxValue = statsPlayer.life.BaseValue; 
         power.maxValue = statsPlayer.power.BaseValue; 
-        hungry.maxValue = statsPlayer.hungry.BaseValue; 
+        speed.maxValue = statsPlayer.speed.BaseValue; 
     }
 
     // Update is called once per frame
@@ -23,6 +23,6 @@ public class StatsUI : MonoBehaviour
     {
         life.value = statsPlayer.life.Value; 
         power.value = statsPlayer.power.Value; 
-        hungry.value = statsPlayer.hungry.Value; 
+        speed.value = statsPlayer.speed.Value; 
     }
 }

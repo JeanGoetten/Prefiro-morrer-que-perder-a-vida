@@ -7,8 +7,8 @@ public class StatsPlayer : MonoBehaviour
 { 
     public CharacterStat life; 
     public CharacterStat power; 
-    public CharacterStat hungry; 
-    public CharacterStat gold; 
+    public CharacterStat speed; 
+    public CharacterStat score; 
     private void Update() {
         
     }

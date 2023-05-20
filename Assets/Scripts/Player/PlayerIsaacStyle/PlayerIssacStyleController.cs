@@ -18,7 +18,7 @@ public class PlayerIssacStyleController : MonoBehaviour
     public float fireRate; 
 
     //controle
-    public bool hitInMouseDirection = false; 
+    public bool mouseFire = false; 
 
 
 
@@ -46,7 +46,7 @@ public class PlayerIssacStyleController : MonoBehaviour
         }
 
         // ATIRA
-        //atira com as setas do teclado nas 4 direções 
+        //atira com as setas do teclado nas 8 direções 
         float shootHorizontal = Input.GetAxis("ShootHorizontal");
         float shootVertical = Input.GetAxis("ShootVertical");
 
@@ -55,18 +55,10 @@ public class PlayerIssacStyleController : MonoBehaviour
             Shoot(shootHorizontal, shootVertical);
             lastFire = Time.time;
         }
-        // controla a opção do inspetor para atirar com o mouse 
-        if(hitInMouseDirection){
-            //atira com o click do mouse na direção do cursor do mouse  
-            if (Input.GetMouseButtonDown(0) && Time.time > lastFire + fireRate){
-                float x = Input.mousePosition.x;
-                float y = Input.mousePosition.y;
-                Shoot(x, y); 
-                lastFire = Time.time;
-            }
-        }else{
-            //atira com o click do mouse nas 8 direções do personagem 
-            if (Input.GetMouseButtonDown(0) && Time.time > lastFire + fireRate){
+        
+        //atira com o click do mouse nas 8 direções 
+        if(mouseFire){
+            if(Input.GetMouseButtonDown(0) && Time.time > lastFire + fireRate){
                 Shoot(lastPlayerMoveX, lastPlayerMoveY);
                 lastFire = Time.time;
             }
