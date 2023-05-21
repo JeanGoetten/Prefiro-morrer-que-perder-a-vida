@@ -36,9 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Characters\Enemies\Enemy_A.cs" />
      <Compile Include="Assets\Scripts\UI\SpeechController.cs" />
      <Compile Include="Assets\Scripts\Manager\LoadScene.cs" />
-     <Compile Include="Assets\Scripts\Adventure\BasicCameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Camera\BasicCameraFollow.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\Shooting.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\IsometricPlayerMovementController.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\WeaponAtMouse.cs" />
@@ -60,7 +61,8 @@
      <Compile Include="Assets\Scripts\Bag\Slot.cs" />
      <Compile Include="Assets\Scripts\Items\ItemStat.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\StatsPlayer.cs" />
-     <Compile Include="Assets\Scripts\Characters\Enemies\Enemy_A.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Camera\PlayerTriggerPosition.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

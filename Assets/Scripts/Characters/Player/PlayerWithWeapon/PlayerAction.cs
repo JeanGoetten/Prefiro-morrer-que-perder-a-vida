@@ -39,7 +39,7 @@ public class PlayerAction : MonoBehaviour
         float angle = MathF.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg; 
         aimTransform.eulerAngles = new Vector3(0, 0, angle); 
 
-        Debug.Log(angle);
+        //Debug.Log(angle);
         // flipa o srpite do personagem de acordo com o ângulo 
         if(angle < 90 && angle > -90){
             spriteRenderer.flipX = false;
