@@ -15,11 +15,18 @@ public class PlayerAction : MonoBehaviour
     public float startDashTime; 
     private int direction = 0; 
 
+    //SPRITE 
+    SpriteRenderer spriteRenderer; 
+
     private void Awake() {
         aimTransform = transform.Find("Aim"); 
 
         rb = GetComponent<Rigidbody2D>(); 
         dashTime = startDashTime; 
+
+    }
+    private void Start() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Update() {
         Aiming(); 
@@ -31,6 +38,14 @@ public class PlayerAction : MonoBehaviour
         Vector3 aimDirection = (mousePos - transform.position).normalized; 
         float angle = MathF.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg; 
         aimTransform.eulerAngles = new Vector3(0, 0, angle); 
+
+        Debug.Log(angle);
+        // flipa o srpite do personagem de acordo com o ângulo 
+        if(angle < 90 && angle > -90){
+            spriteRenderer.flipX = false;
+        }else{
+            spriteRenderer.flipX = true;
+        }
     }
     public void Dash(){
         if(direction == 0){
