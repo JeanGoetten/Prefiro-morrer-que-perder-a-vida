@@ -17,6 +17,7 @@ public class PlayerAction : MonoBehaviour
 
     //SPRITE 
     SpriteRenderer spriteRenderer; 
+    public SpriteRenderer weaponSpriteRenderer; 
 
     private void Awake() {
         aimTransform = transform.Find("Aim"); 
@@ -45,6 +46,12 @@ public class PlayerAction : MonoBehaviour
             spriteRenderer.flipX = false;
         }else{
             spriteRenderer.flipX = true;
+        }
+        // flipa o sprite da arma de acordo com o ângulo
+        if(angle < 90 && angle > -90){
+            weaponSpriteRenderer.flipY = false;
+        }else{
+            weaponSpriteRenderer.flipY = true;
         }
     }
     public void Dash(){
@@ -77,9 +84,6 @@ public class PlayerAction : MonoBehaviour
                 }
             }
         }
-
-
-
 
         if(Input.GetMouseButtonDown(1)){
             Vector2 mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition); 

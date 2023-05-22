@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\Bag\Inventory.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerIsaacStyle\PlayerIssacStyleController.cs" />
      <Compile Include="Assets\Scripts\Mimic\MimicSpawn.cs" />
+     <Compile Include="Assets\Scripts\UI\PauseGame.cs" />
      <Compile Include="Assets\Scripts\Bag\Spawn.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\IsometricCharacterRenderer.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\PlayerAction.cs" />
@@ -63,7 +64,6 @@
      <Compile Include="Assets\Scripts\Items\ItemStat.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\StatsPlayer.cs" />
      <Compile Include="Assets\Scripts\Camera\PlayerTriggerPosition.cs" />
-     <Compile Include="Assets\Scripts\UI\PauseGame.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
