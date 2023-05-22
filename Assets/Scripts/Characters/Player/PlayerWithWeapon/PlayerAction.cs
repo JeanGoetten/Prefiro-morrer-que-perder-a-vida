@@ -28,7 +28,7 @@ public class PlayerAction : MonoBehaviour
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    private void Update() {
+    private void FixedUpdate() {
         Aiming(); 
         Dash(); 
     }
