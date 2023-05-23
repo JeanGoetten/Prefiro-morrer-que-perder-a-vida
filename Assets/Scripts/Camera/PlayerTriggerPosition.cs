@@ -9,7 +9,7 @@ public class PlayerTriggerPosition : MonoBehaviour
     public Transform passPositionForCam; 
     public Transform adventurePositionForCam; 
 
-    public Transform camera; 
+    public new Transform camera; 
 
     private bool limboTriggred; 
     private bool passTriggred; 

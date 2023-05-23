@@ -73,8 +73,11 @@ public class Enemy_A : MonoBehaviour
     {
         if(other.gameObject.tag == "Bullet")
         {
-            Destroy(this.gameObject);
+            EnemiesSpawnController.bodyCount++; 
+            EnemiesSpawnController.enemyKilled = true;  
+            
             Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
