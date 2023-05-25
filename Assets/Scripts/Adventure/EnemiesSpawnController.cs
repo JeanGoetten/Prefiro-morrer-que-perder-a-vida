@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class EnemiesSpawnController : MonoBehaviour
 {
-    public static int bodyCount; 
+    public float x_RightLimit;
+    public float x_LeftLimit;
+    public float y_UpLimit;  
+    public float y_DownLimit; 
+    public static int bodyCount = 0; 
+    private int _bodyCount = 0; 
     public static bool enemyKilled; 
-    public int waveCount = 0; 
+    private int waveCount = 0; 
+    public int bodyCountToFirstNewWave = 6; 
+    public int newWaveEvery = 6; 
     public List<GameObject> enemiesList; 
 
     private void Update(){
@@ -15,10 +22,36 @@ public class EnemiesSpawnController : MonoBehaviour
         }
     }
     public void SpawNewEnemy(){
-        float x = Random.Range(-12.5f, 13f); 
-        float y = Random.Range(22.5f, 49f); 
-        Instantiate(enemiesList[0], new Vector3(x, y, 0), Quaternion.identity);
+        // Level controller
+        if(bodyCount == bodyCountToFirstNewWave){
+            waveCount++; 
+            bodyCountToFirstNewWave = bodyCountToFirstNewWave + newWaveEvery; 
+        }
+        
+
+
+
+        // Build random coordinates for spawn 
+        float x = Random.Range(x_LeftLimit, x_RightLimit); 
+        float y = Random.Range(y_DownLimit, y_UpLimit); 
+
+        // Make the last enemy the 'terror' enemy 
+        if(waveCount > enemiesList.Count - 1){
+            waveCount = enemiesList.Count  - 1; 
+
+            //Increese some stat for the last enemy in the enemies list
+            EnemyStatsModifier(); 
+        }
+
+        // Instantiate the enemy 
+        Instantiate(enemiesList[waveCount], new Vector3(x, y, 0), Quaternion.identity);
+
+        // reset 'enemy killed moment' 
         enemyKilled = false; 
         Debug.Log(bodyCount + " kill");
+    }
+
+    void EnemyStatsModifier(){
+        enemiesList[waveCount].GetComponent<Enemy_A>().moveSpeed = enemiesList[waveCount].GetComponent<Enemy_A>().moveSpeed + 1f;  
     }
 }
