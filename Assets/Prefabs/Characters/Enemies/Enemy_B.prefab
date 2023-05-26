@@ -168,8 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aead96ce83bb2804196813c09897e919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  speedZigZag: 5
+  horizontalSpeed: 4
+  verticalSpeed: 4
+  levelUp: 0
   leftPoint: -30
   rightPoint: 30
   UPPoint: 57.5

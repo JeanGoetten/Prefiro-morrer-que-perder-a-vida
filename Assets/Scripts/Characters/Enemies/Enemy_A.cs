@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy_A : MonoBehaviour
 {
-    [Range(0, 50)] public float moveSpeed = 2.0f;
+    [Range(0, 50)] public float horizontalSpeed;
+    [Range(0, 50)] public float verticalSpeed; 
+    public float level = 0.0f;
     //[Range(0, 1000)] public float speedRotation = 1.0f; 
-    [Range(0, 50)] public float speedZigZag = 10.0f; 
     public float leftPoint, rightPoint, UPPoint, DownPoint; 
     public bool movingHorizontal = true, movingVertical = true; 
 
@@ -53,21 +54,21 @@ public class Enemy_A : MonoBehaviour
         movingHorizontal = true; 
         localScale.x = 1; 
         transform.localScale = localScale; 
-        rb.velocity = new Vector2(localScale.x * moveSpeed, rb.velocity.y); 
+        rb.velocity = new Vector2(localScale.x * (horizontalSpeed + level), rb.velocity.y); 
     }
     void MoveLeft(){
         movingHorizontal = false; 
         localScale.x = -1; 
         transform.localScale = localScale; 
-        rb.velocity = new Vector2(localScale.x * moveSpeed, rb.velocity.y); 
+        rb.velocity = new Vector2(localScale.x * (horizontalSpeed + level), rb.velocity.y); 
     }
     void MoveUP(){
         movingVertical = true; 
-        rb.velocity = new Vector2(rb.velocity.x, localScale.y * speedZigZag); 
+        rb.velocity = new Vector2(rb.velocity.x, localScale.y * (verticalSpeed + level)); 
     }
     void MoveDown(){
         movingVertical = false; 
-        rb.velocity = new Vector2(rb.velocity.x, localScale.y*(-1) * speedZigZag); 
+        rb.velocity = new Vector2(rb.velocity.x, localScale.y*(-1) * (verticalSpeed + level)); 
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -78,6 +79,19 @@ public class Enemy_A : MonoBehaviour
             
             Destroy(other.gameObject);
             Destroy(this.gameObject);
+        }
+        if(other.gameObject.tag == "Enemy")
+        {
+            if(movingHorizontal){
+                MoveLeft(); 
+            }else{
+                MoveRight(); 
+            }
+            if(movingVertical){
+                MoveDown(); 
+            }else{
+                MoveUP(); 
+            }
         }
     }
 }
