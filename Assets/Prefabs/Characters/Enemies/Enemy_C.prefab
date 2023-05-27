@@ -172,6 +172,7 @@ MonoBehaviour:
   horizontalSpeed: 6
   verticalSpeed: 6
   level: 0
+  timeToRespawn: 1
   leftPoint: -30
   rightPoint: 30
   UPPoint: 57.5

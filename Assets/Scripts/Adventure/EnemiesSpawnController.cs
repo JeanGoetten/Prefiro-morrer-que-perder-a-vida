@@ -19,9 +19,6 @@ public class EnemiesSpawnController : MonoBehaviour
     public bool autoFirstSpawn = false; 
     public int autoEnemiesAmount = 0; 
 
-    // Time
-    public float spawnCoolDown = 0f; 
-
     public List<GameObject> enemiesList; 
 
     private void Start() {
@@ -75,7 +72,7 @@ public class EnemiesSpawnController : MonoBehaviour
         float x = Random.Range(x_LeftLimit, x_RightLimit); 
         float y = Random.Range(y_DownLimit, y_UpLimit); 
 
-        yield return new WaitForSeconds(spawnCoolDown);
+        yield return new WaitForSeconds(enemiesList[waveCount].GetComponent<Enemy_A>().timeToRespawn);
 
         Instantiate(enemiesList[waveCount], new Vector3(x, y, 0), Quaternion.identity);
     } 

@@ -7,6 +7,7 @@ public class Enemy_A : MonoBehaviour
     [Range(0, 50)] public float horizontalSpeed;
     [Range(0, 50)] public float verticalSpeed; 
     public float level = 0.0f;
+    public float timeToRespawn = 0.0f;
     //[Range(0, 1000)] public float speedRotation = 1.0f; 
     public float leftPoint, rightPoint, UPPoint, DownPoint; 
     public bool movingHorizontal = true, movingVertical = true; 
