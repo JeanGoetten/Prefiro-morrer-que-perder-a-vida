@@ -60,11 +60,11 @@
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\FXConstroller.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerIsaacStyle\BulletController.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\CharacterStat.cs" />
-     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Mimic\MimicTalk.cs" />
      <Compile Include="Assets\Scripts\Bag\Slot.cs" />
      <Compile Include="Assets\Scripts\Items\ItemStat.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\StatsPlayer.cs" />
+     <Compile Include="Assets\Scripts\Camera\ScreenShake.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
