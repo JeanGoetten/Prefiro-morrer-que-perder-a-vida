@@ -43,8 +43,8 @@ public class ItemStat : MonoBehaviour, IPointerClickHandler
     }
     public void DropItem(){
         statsPlayer.score.AddModifier(new StatModifier(scoreValue, StatModType.Flat)); 
-        FXConstroller.log = "+" + scoreValue.ToString() + " points"; 
-        Destroy(this.gameObject);
+        FXConstroller.SetLog("+" + scoreValue.ToString() + " points");
+        //Destroy(this.gameObject);
     }
     public void UseItem(){
         if(lifeStat){
@@ -54,36 +54,36 @@ public class ItemStat : MonoBehaviour, IPointerClickHandler
                 statsPlayer.life.AddModifier(new StatModifier(statsModifierLife, StatModType.PercentAdd)); 
             } 
             if(statsModifierLife > 0){
-                FXConstroller.log = "+" + statsModifierLife.ToString() + " life"; 
+                FXConstroller.SetLog("+" + statsModifierLife.ToString() + " life"); 
             }else{
-                FXConstroller.log = statsModifierLife.ToString() + " life"; 
-            }
+                FXConstroller.SetLog(statsModifierLife.ToString() + " life"); 
+            } 
         }
         if(powerStat){
             statsPlayer.power.AddModifier(new StatModifier(statsModifierPower, StatModType.Flat)); 
             if(statsModifierPower > 0){
-                FXConstroller.log = "+" + statsModifierPower.ToString() + " power"; 
+                FXConstroller.SetLog("+" + statsModifierPower.ToString() + " power"); 
             }else{
-                FXConstroller.log = statsModifierPower.ToString() + " power"; 
+                FXConstroller.SetLog(statsModifierPower.ToString() + " power"); 
             }
         }
         if(speedStat){
             statsPlayer.speed.AddModifier(new StatModifier(statsModifierSpeed, StatModType.Flat)); 
             if(statsModifierSpeed > 0){
-                FXConstroller.log = "+" + statsModifierSpeed.ToString() + " speed"; 
+                FXConstroller.SetLog("+" + statsModifierSpeed.ToString() + " speed"); 
             }else{
-                FXConstroller.log = statsModifierSpeed.ToString() + " speed"; 
+                FXConstroller.SetLog(statsModifierSpeed.ToString() + " speed"); 
             }
         }
         if(scoreStat){
             statsPlayer.score.AddModifier(new StatModifier(statsModifierScore, StatModType.Flat)); 
             if(statsModifierScore > 0){
-                FXConstroller.log = "+" + statsModifierScore.ToString() + " score"; 
+                FXConstroller.SetLog("+" + statsModifierScore.ToString() + " score"); 
             }else{
-                FXConstroller.log = statsModifierScore.ToString() + " score"; 
+                FXConstroller.SetLog(statsModifierScore.ToString() + " score"); 
             }
         }
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
     public void OnPointerClick(PointerEventData eventData)
      {

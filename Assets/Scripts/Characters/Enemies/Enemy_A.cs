@@ -6,6 +6,7 @@ public class Enemy_A : MonoBehaviour
 {
     [Range(0, 50)] public float horizontalSpeed;
     [Range(0, 50)] public float verticalSpeed; 
+    [Range(0, 50)] public float followSpeed; 
     public float level = 0.0f;
     public float timeToRespawn = 0.0f;
     //[Range(0, 1000)] public float speedRotation = 1.0f; 
@@ -15,10 +16,14 @@ public class Enemy_A : MonoBehaviour
     Vector3 localScale; 
     Rigidbody2D rb; 
 
+    private ItemStat itemStat; 
+
     private void Start() {
         localScale = transform.localScale; 
 
         rb = GetComponent<Rigidbody2D>(); 
+
+        itemStat = GetComponent<ItemStat>(); 
     }
     void Update()
     {
@@ -75,6 +80,7 @@ public class Enemy_A : MonoBehaviour
     {
         if(other.gameObject.tag == "Bullet")
         {
+            Debug.Log("Enemy bulleted!");
             EnemiesSpawnController.bodyCount++; 
             EnemiesSpawnController.enemyKilled = true;  
             
@@ -93,6 +99,28 @@ public class Enemy_A : MonoBehaviour
             }else{
                 MoveUP(); 
             }
+        }
+        if(other.gameObject.tag == "Player"){
+            Debug.Log("Player hurted!");
+            itemStat.UseItem(); 
+        }
+    }
+    void OnTriggerStay2D(Collider2D other){
+        if(other.gameObject.tag == "Player")
+        {
+            Vector3 targetPos = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, transform.position.z);
+		    Vector3 velocity = (targetPos - transform.position) * followSpeed;
+		    transform.position = Vector3.SmoothDamp (transform.position, targetPos, ref velocity, 1.0f, Time.deltaTime);
+
+            if(other.gameObject.transform.position.x < transform.position.x){
+                MoveLeft(); 
+                //Debug.Log("player à esquerda");
+            }else{
+                MoveRight(); 
+                //Debug.Log("player à direita");
+            }
+        }else{
+            // berro 
         }
     }
 }

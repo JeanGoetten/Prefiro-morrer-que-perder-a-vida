@@ -43,6 +43,7 @@
      <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\Shooting.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\IsometricPlayerMovementController.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\WeaponAtMouse.cs" />
+     <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\StatsPlayer.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerIsaacStyle\PlayerIssacStyleController.cs" />
      <Compile Include="Assets\Scripts\Mimic\MimicSpawn.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemies\EnemyStats.cs" />
@@ -60,14 +61,13 @@
      <Compile Include="Assets\Scripts\UI\PauseGame.cs" />
      <Compile Include="Assets\Scripts\Bag\Spawn.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\IsometricCharacterRenderer.cs" />
-     <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\FXConstroller.cs" />
+     <Compile Include="Assets\Scripts\Characters\Player\FXConstroller.cs" />
+     <Compile Include="Assets\Scripts\Characters\Player\BulletController.cs" />
      <Compile Include="Assets\Scripts\Items\Weapon\WeaponStats.cs" />
-     <Compile Include="Assets\Scripts\Characters\Player\PlayerIsaacStyle\BulletController.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\CharacterStat.cs" />
      <Compile Include="Assets\Scripts\Mimic\MimicTalk.cs" />
      <Compile Include="Assets\Scripts\Bag\Slot.cs" />
      <Compile Include="Assets\Scripts\Items\ItemStat.cs" />
-     <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\StatsPlayer.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
