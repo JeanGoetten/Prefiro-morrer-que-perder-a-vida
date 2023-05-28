@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Bag\Pickup.cs" />
      <Compile Include="Assets\Scripts\Camera\PlayerTriggerPosition.cs" />
      <Compile Include="Assets\Scripts\Manager\LoadScene.cs" />
+     <Compile Include="Assets\Scripts\Camera\ScreenShake.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\UI\StatsUI.cs" />
      <Compile Include="Assets\Scripts\Bag\Inventory.cs" />
@@ -64,7 +65,6 @@
      <Compile Include="Assets\Scripts\Bag\Slot.cs" />
      <Compile Include="Assets\Scripts\Items\ItemStat.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\StatsPlayer.cs" />
-     <Compile Include="Assets\Scripts\Camera\ScreenShake.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
