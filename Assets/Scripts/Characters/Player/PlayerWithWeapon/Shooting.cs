@@ -25,7 +25,7 @@ public class Shooting : MonoBehaviour
         bulletForce = WeaponController.force; 
 
         fireTime += Time.deltaTime; 
-        Debug.Log(fireTime);
+        //Debug.Log(fireTime);
 
         if(fireTime > WeaponController.fireRate){
             Shoot(); 
