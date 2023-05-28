@@ -38,6 +38,7 @@ public class Shooting : MonoBehaviour
         if(Input.GetMouseButtonDown(0)){
             //Shoot Animation 
             
+            // verify and instatiate 
             if(!PauseGame.gameIsPaused && canShoot){
                 camera.GetComponent<ScreenShake>().start = true; 
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 

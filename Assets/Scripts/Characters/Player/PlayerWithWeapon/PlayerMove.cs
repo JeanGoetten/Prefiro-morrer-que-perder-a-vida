@@ -8,7 +8,9 @@ public class PlayerMove : MonoBehaviour
     public float speed; 
     Rigidbody2D rb; 
 
-    
+    private float animationSpeed; 
+
+    public Animator characterAnimator; 
 
     void Start()
     {
@@ -23,5 +25,16 @@ public class PlayerMove : MonoBehaviour
         float vertical = Input.GetAxis("Vertical"); 
 
         rb.velocity = new Vector3(horizontal * speed, vertical * speed, 0); 
+
+        if(Mathf.Abs(rb.velocity.x) > 0){
+            animationSpeed = Mathf.Abs(rb.velocity.x);
+        }
+        else if(Mathf.Abs(rb.velocity.y) > 0){
+            animationSpeed = Mathf.Abs(rb.velocity.y);
+        }else{
+            animationSpeed = 0; 
+        }
+        //Debug.Log(animationSpeed);
+        characterAnimator.SetFloat("walking", animationSpeed); 
     }
 }

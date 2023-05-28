@@ -16,7 +16,7 @@ public class PlayerAction : MonoBehaviour
     private int direction = 0; 
 
     //SPRITE 
-    SpriteRenderer spriteRenderer; 
+    public Transform spriteRenderer; 
     public SpriteRenderer weaponSpriteRenderer; 
 
     private void Awake() {
@@ -25,9 +25,6 @@ public class PlayerAction : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); 
         dashTime = startDashTime; 
 
-    }
-    private void Start() {
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void FixedUpdate() {
         Aiming(); 
@@ -43,9 +40,9 @@ public class PlayerAction : MonoBehaviour
         //Debug.Log(angle);
         // flipa o srpite do personagem de acordo com o ângulo 
         if(angle < 90 && angle > -90){
-            spriteRenderer.flipX = false;
+            spriteRenderer.localScale = new Vector3(1, 1, 1); 
         }else{
-            spriteRenderer.flipX = true;
+            spriteRenderer.localScale = new Vector3(-1, 1, 1); 
         }
         // flipa o sprite da arma de acordo com o ângulo
         if(angle < 90 && angle > -90){

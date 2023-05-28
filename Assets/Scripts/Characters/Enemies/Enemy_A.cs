@@ -16,10 +16,14 @@ public class Enemy_A : MonoBehaviour
     Vector3 localScale; 
     Rigidbody2D rb; 
 
+    private ItemStat itemStat; 
+
     private void Start() {
         localScale = transform.localScale; 
 
         rb = GetComponent<Rigidbody2D>(); 
+
+        itemStat = GetComponent<ItemStat>(); 
     }
     void Update()
     {
@@ -76,6 +80,7 @@ public class Enemy_A : MonoBehaviour
     {
         if(other.gameObject.tag == "Bullet")
         {
+            Debug.Log("Enemy bulleted!");
             EnemiesSpawnController.bodyCount++; 
             EnemiesSpawnController.enemyKilled = true;  
             
@@ -95,6 +100,10 @@ public class Enemy_A : MonoBehaviour
                 MoveUP(); 
             }
         }
+        if(other.gameObject.tag == "Player"){
+            Debug.Log("Player hurted!");
+            itemStat.UseItem(); 
+        }
     }
     void OnTriggerStay2D(Collider2D other){
         if(other.gameObject.tag == "Player")
@@ -111,7 +120,7 @@ public class Enemy_A : MonoBehaviour
                 //Debug.Log("player à direita");
             }
         }else{
-
+            // berro 
         }
     }
 }

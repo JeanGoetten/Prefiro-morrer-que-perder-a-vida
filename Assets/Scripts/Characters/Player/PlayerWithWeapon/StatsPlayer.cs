@@ -9,7 +9,4 @@ public class StatsPlayer : MonoBehaviour
     public CharacterStat power; 
     public CharacterStat speed; 
     public CharacterStat score; 
-    private void Update() {
-        
-    }
 }
