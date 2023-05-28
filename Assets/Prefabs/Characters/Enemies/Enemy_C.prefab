@@ -171,8 +171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalSpeed: 6
   verticalSpeed: 6
-  level: 0
-  timeToRespawn: 1
+  level: 0.70000005
+  timeToRespawn: 3
   leftPoint: -30
   rightPoint: 30
   UPPoint: 57.5

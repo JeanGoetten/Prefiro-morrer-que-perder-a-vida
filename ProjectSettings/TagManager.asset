@@ -10,6 +10,7 @@ TagManager:
   - Limbo
   - Pass
   - Adventure
+  - Obstacle_1
   layers:
   - Default
   - TransparentFX

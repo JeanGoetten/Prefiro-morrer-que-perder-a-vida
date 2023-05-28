@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\PlayerAction.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StatModifier.cs" />
      <Compile Include="Assets\Scripts\Bag\Pickup.cs" />
+     <Compile Include="Assets\Scripts\Items\Weapon\WeaponController.cs" />
+     <Compile Include="Assets\Scripts\Adventure\Obstacle_1.cs" />
      <Compile Include="Assets\Scripts\Camera\PlayerTriggerPosition.cs" />
      <Compile Include="Assets\Scripts\Manager\LoadScene.cs" />
      <Compile Include="Assets\Scripts\Camera\ScreenShake.cs" />
@@ -59,6 +61,7 @@
      <Compile Include="Assets\Scripts\Bag\Spawn.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\IsometricCharacterRenderer.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerLikeDontStarve\FXConstroller.cs" />
+     <Compile Include="Assets\Scripts\Items\Weapon\WeaponStats.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerIsaacStyle\BulletController.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\CharacterStat.cs" />
      <Compile Include="Assets\Scripts\Mimic\MimicTalk.cs" />
@@ -71,6 +74,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\2D Machine Gun Pack #1\Document.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
