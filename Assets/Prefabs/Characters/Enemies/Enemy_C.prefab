@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 2054241614704091521}
   - component: {fileID: 2054241614704091523}
   - component: {fileID: 2054241614704091526}
+  - component: {fileID: -4905914767392884056}
   m_Layer: 0
   m_Name: Enemy_C
   m_TagString: Enemy
@@ -171,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalSpeed: 6
   verticalSpeed: 6
+  followSpeed: 0
   level: 0.70000005
   timeToRespawn: 3
   leftPoint: -30
@@ -179,3 +181,32 @@ MonoBehaviour:
   DownPoint: 26
   movingHorizontal: 1
   movingVertical: 1
+--- !u!114 &-4905914767392884056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054241614704091527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab05c32e8c1f8294b90606541292d59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsModifierLife: 3
+  statsModifierPower: 4
+  statsModifierSpeed: 5
+  statsModifierScore: 6
+  flat: 1
+  percent: 0
+  lifeStat: 1
+  powerStat: 0
+  speedStat: 0
+  scoreStat: 0
+  scoreValue: 0
+  leftClick:
+    m_PersistentCalls:
+      m_Calls: []
+  rightClick:
+    m_PersistentCalls:
+      m_Calls: []

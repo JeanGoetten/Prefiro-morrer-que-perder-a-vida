@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 500896484840967799}
   - component: {fileID: 500896484840967797}
   - component: {fileID: 500896484840967792}
+  - component: {fileID: -4142679067410186133}
   m_Layer: 0
   m_Name: Enemy_A
   m_TagString: Enemy
@@ -171,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalSpeed: 2
   verticalSpeed: 2
+  followSpeed: 0
   level: 0
   timeToRespawn: 1
   leftPoint: -30
@@ -179,3 +181,32 @@ MonoBehaviour:
   DownPoint: 26
   movingHorizontal: 1
   movingVertical: 1
+--- !u!114 &-4142679067410186133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500896484840967793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab05c32e8c1f8294b90606541292d59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsModifierLife: 1
+  statsModifierPower: 2
+  statsModifierSpeed: 3
+  statsModifierScore: 4
+  flat: 1
+  percent: 0
+  lifeStat: 1
+  powerStat: 0
+  speedStat: 0
+  scoreStat: 0
+  scoreValue: 0
+  leftClick:
+    m_PersistentCalls:
+      m_Calls: []
+  rightClick:
+    m_PersistentCalls:
+      m_Calls: []
