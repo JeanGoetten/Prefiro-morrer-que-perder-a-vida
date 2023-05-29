@@ -7,6 +7,7 @@ using TMPro;
 public class SpeechController : MonoBehaviour
 {
     public float textDisplayTime; 
+    public float intervalTime; 
     public TMP_Text mimicTextBox;  
     public TMP_Text playerTextBox;  
     public TMP_Text scoreTextBox;  
@@ -21,33 +22,31 @@ public class SpeechController : MonoBehaviour
     private List<string> mimicSpeech; 
     public GameObject mimic; 
 
+    private bool cdController = true;
+
     void Start()
     {
         textAnimator = GetComponent<Animator>(); 
         mimicSpeech = mimic.GetComponent<MimicTalk>().clickTalk; 
-    }
-    // void Update()
-    // {
-    //     if(Input.GetKeyDown(KeyCode.C)){
-    //         animator.SetTrigger("talk"); 
-    //     }
-    //     if(log != null && cd){
-    //         cd = false; 
-    //         StartCoroutine(Log()); 
-    //     }
-    // }
 
+        cdController = true; 
+    }
     public void MimicSpeech(){
-        StartCoroutine(textDisplayCD());
-        mimicTextBox.text = mimicSpeech[mimicClickCount]; 
-        mimicClickCount++; 
-        if(mimicClickCount >= mimicSpeech.Count){
-            mimicClickCount = 0; 
+        if(cdController){
+            cdController = false; 
+            StartCoroutine(textDisplayCD());
+            mimicTextBox.text = mimicSpeech[mimicClickCount]; 
+            mimicClickCount++; 
+            if(mimicClickCount >= mimicSpeech.Count){
+                mimicClickCount = 0; 
+            }
         }
     }
     IEnumerator textDisplayCD(){
         textAnimator.SetTrigger("fadeIn"); 
         yield return new WaitForSeconds(textDisplayTime); 
         textAnimator.SetTrigger("fadeOut");
+        yield return new WaitForSeconds(intervalTime); 
+        cdController = true; 
     }
 }

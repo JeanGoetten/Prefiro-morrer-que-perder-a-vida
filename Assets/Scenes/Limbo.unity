@@ -5697,6 +5697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplayTime: 1
+  intervalTime: 0.75
   mimicTextBox: {fileID: 2071927269}
   playerTextBox: {fileID: 0}
   scoreTextBox: {fileID: 0}
