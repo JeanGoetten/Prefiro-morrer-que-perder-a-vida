@@ -24,5 +24,7 @@ public class StatsUI : MonoBehaviour
         life.value = statsPlayer.life.Value; 
         power.value = statsPlayer.power.Value; 
         speed.value = statsPlayer.speed.Value; 
+
+        //Debug.Log(statsPlayer.life.Value);
     }
 }

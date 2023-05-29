@@ -533,6 +533,8 @@ MonoBehaviour:
   DownPoint: 23.2
   movingHorizontal: 1
   movingVertical: 1
+  canDamage: 0
+  damageCooldownTime: 1
 --- !u!114 &977948000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,14 +547,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab05c32e8c1f8294b90606541292d59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsModifierLife: -4
+  statsModifierLife: -5
   statsModifierPower: 1
   statsModifierSpeed: 1
-  statsModifierScore: -7
+  statsModifierScore: 10
   flat: 1
   percent: 0
   lifeStat: 1
-  powerStat: 1
+  powerStat: 0
   speedStat: 0
   scoreStat: 0
   scoreValue: 0

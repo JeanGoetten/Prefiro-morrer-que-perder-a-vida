@@ -180,6 +180,8 @@ MonoBehaviour:
   DownPoint: 26
   movingHorizontal: 1
   movingVertical: 1
+  canDamage: 0
+  damageCooldownTime: 1
 --- !u!114 &7055458484992332149
 MonoBehaviour:
   m_ObjectHideFlags: 0

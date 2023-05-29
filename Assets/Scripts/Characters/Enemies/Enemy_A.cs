@@ -18,12 +18,17 @@ public class Enemy_A : MonoBehaviour
 
     private ItemStat itemStat; 
 
+    public bool canDamage; 
+    public float damageCooldownTime; 
+
     private void Start() {
         localScale = transform.localScale; 
 
         rb = GetComponent<Rigidbody2D>(); 
 
         itemStat = GetComponent<ItemStat>(); 
+
+        canDamage = true; 
     }
     void Update()
     {
@@ -101,8 +106,18 @@ public class Enemy_A : MonoBehaviour
             }
         }
         if(other.gameObject.tag == "Player"){
-            Debug.Log("Player hurted!");
+            //Debug.Log("Player hurted!");
             itemStat.UseItem(); 
+        }
+    }
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Player"){
+            //Debug.Log("Player hurted!");
+            if(canDamage){
+                itemStat.UseItem(); 
+                StartCoroutine(InvulnerableTime()); 
+            }
         }
     }
     void OnTriggerStay2D(Collider2D other){
@@ -122,5 +137,10 @@ public class Enemy_A : MonoBehaviour
         }else{
             // berro 
         }
+    }
+    IEnumerator InvulnerableTime(){
+        canDamage = false; 
+        yield return new WaitForSeconds(damageCooldownTime); 
+        canDamage = true; 
     }
 }
