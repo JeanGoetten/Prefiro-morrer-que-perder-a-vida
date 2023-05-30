@@ -89,44 +89,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab05c32e8c1f8294b90606541292d59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsModifierLife: -1
-  statsModifierPower: 2
-  statsModifierSpeed: 0.01
-  statsModifierScore: 0.01
+  statsModifierLife: 0
+  statsModifierPower: 0
+  statsModifierSpeed: 0
+  statsModifierScore: 0
   flat: 1
   percent: 0
-  lifeStat: 1
-  powerStat: 1
+  lifeStat: 0
+  powerStat: 0
   speedStat: 0
-  scoreStat: 0
-  scoreValue: 0
+  scoreStat: 1
+  scoreValue: 2
   leftClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -8717658106185240813}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: UseItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   rightClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -8717658106185240813}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: DropItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []

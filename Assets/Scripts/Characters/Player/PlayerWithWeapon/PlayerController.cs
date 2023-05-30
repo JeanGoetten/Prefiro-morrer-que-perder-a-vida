@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     public void PlayerDied(){
-        Debug.Log("Player died!");
+        //Debug.Log("Player died!");
 
         // Player die animation 
 
@@ -36,5 +36,8 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(playerStartPosition.x, playerStartPosition.y, 0); 
         itemStat.statsModifierLife = statsPlayer.life.BaseValue; 
         itemStat.UseItem(); 
+
+        // Item reroll
+        GameObject.FindGameObjectWithTag("Mimic").GetComponent<MimicSpawn>().itemSpawnAvaiable = true; 
     }
 }

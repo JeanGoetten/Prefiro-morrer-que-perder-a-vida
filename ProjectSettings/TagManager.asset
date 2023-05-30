@@ -11,6 +11,7 @@ TagManager:
   - Pass
   - Adventure
   - Obstacle_1
+  - Mimic
   layers:
   - Default
   - TransparentFX

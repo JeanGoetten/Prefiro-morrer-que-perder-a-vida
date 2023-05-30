@@ -44,7 +44,7 @@ public class ItemStat : MonoBehaviour, IPointerClickHandler
     public void DropItem(){
         statsPlayer.score.AddModifier(new StatModifier(scoreValue, StatModType.Flat)); 
         FXConstroller.SetLog("+" + scoreValue.ToString() + " points");
-        //Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
     public void UseItem(){
         if(lifeStat){
