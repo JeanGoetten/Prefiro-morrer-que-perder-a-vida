@@ -473,7 +473,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.7302635, y: 2.4501624}
   serializedVersion: 2
-  m_Radius: 1.2518497
+  m_Radius: 1.5
 --- !u!58 &5077894851144023068
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -487,9 +487,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2}
+  m_Offset: {x: 0, y: 2.5}
   serializedVersion: 2
-  m_Radius: 9
+  m_Radius: 10
 --- !u!95 &5077894851144023059
 Animator:
   serializedVersion: 5
@@ -548,16 +548,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsModifierLife: -5
-  statsModifierPower: 1
-  statsModifierSpeed: 1
-  statsModifierScore: 10
+  statsModifierPower: 0
+  statsModifierSpeed: 0
+  statsModifierScore: 0
   flat: 1
   percent: 0
   lifeStat: 1
   powerStat: 0
   speedStat: 0
   scoreStat: 0
-  scoreValue: 0
+  scoreValue: 10
   leftClick:
     m_PersistentCalls:
       m_Calls: []

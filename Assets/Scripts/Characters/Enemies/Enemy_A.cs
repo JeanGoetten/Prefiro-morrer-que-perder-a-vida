@@ -85,9 +85,10 @@ public class Enemy_A : MonoBehaviour
     {
         if(other.gameObject.tag == "Bullet")
         {
-            Debug.Log("Enemy bulleted!");
+            //Debug.Log("Enemy bulleted!");
             EnemiesSpawnController.bodyCount++; 
             EnemiesSpawnController.enemyKilled = true;  
+            itemStat.DropItem(); 
             
             Destroy(other.gameObject);
             Destroy(this.gameObject);
@@ -127,12 +128,14 @@ public class Enemy_A : MonoBehaviour
 		    Vector3 velocity = (targetPos - transform.position) * followSpeed;
 		    transform.position = Vector3.SmoothDamp (transform.position, targetPos, ref velocity, 1.0f, Time.deltaTime);
 
-            if(other.gameObject.transform.position.x < transform.position.x){
+            if(other.gameObject.transform.position.x <= transform.position.x + 2f){
                 MoveLeft(); 
                 //Debug.Log("player à esquerda");
-            }else{
+            }else if(other.gameObject.transform.position.x > transform.position.x - 2f){
                 MoveRight(); 
                 //Debug.Log("player à direita");
+            }else{
+                //MoveRight(); 
             }
         }else{
             // berro 

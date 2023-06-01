@@ -11,6 +11,8 @@ public class MimicSpawn : MonoBehaviour
 
     public static int randomIndex; 
 
+    private int lastRandomIndex; 
+
     private void Start() {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>(); 
         randomIndex = 0; 
@@ -20,7 +22,8 @@ public class MimicSpawn : MonoBehaviour
         if(itemSpawnAvaiable){
             
             randomIndex = Random.Range(0, itemList.Count); 
-            while(randomIndex == 0){
+            
+            while(randomIndex == 0 || randomIndex == lastRandomIndex){
                 randomIndex = Random.Range(0, itemList.Count); 
             }
             GameObject item = Instantiate(itemList[randomIndex], 
@@ -31,6 +34,8 @@ public class MimicSpawn : MonoBehaviour
             Instantiate(item.GetComponent<Pickup>().itemButton, inventory.slots[0].transform, false);
 
             Debug.Log("nova arma");
+
+            lastRandomIndex = randomIndex; 
             // for(int i = 0; i < inventory.slots.Length; i++)
             //     {
             //         if(inventory.isFull[i] == false){
