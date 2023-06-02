@@ -32,9 +32,12 @@ public class PlayerController : MonoBehaviour
         // Restart adventure 
         //
 
+        // Score Register 
+
         // Player Reposition 
         transform.position = new Vector3(playerStartPosition.x, playerStartPosition.y, 0); 
         itemStat.statsModifierLife = statsPlayer.life.BaseValue; 
+        itemStat.statsModifierScore = statsPlayer.score.Value * -1;
         itemStat.UseItem(); 
 
         // Item reroll

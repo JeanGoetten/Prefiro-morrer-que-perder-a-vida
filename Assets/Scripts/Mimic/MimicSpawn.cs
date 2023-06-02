@@ -31,7 +31,14 @@ public class MimicSpawn : MonoBehaviour
 
             itemSpawnAvaiable = false; 
             // for one slot style
-            Instantiate(item.GetComponent<Pickup>().itemButton, inventory.slots[0].transform, false);
+            if(inventory.isFull[0] == false){
+                inventory.isFull[0] = true;
+                Instantiate(item.GetComponent<Pickup>().itemButton, inventory.slots[0].transform, false);
+            }else{
+                Destroy(inventory.slots[0].transform.GetChild(0).gameObject); 
+                Instantiate(item.GetComponent<Pickup>().itemButton, inventory.slots[0].transform, false);
+            }
+            
 
             Debug.Log("nova arma");
 
