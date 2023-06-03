@@ -10,6 +10,7 @@ public class FXConstroller : MonoBehaviour
     public Animator canvasAnimator; 
     public static string log; 
     public static bool startLog; 
+    public static string typeLog; 
     private string symbol; 
     private bool cd; 
     void Start()
@@ -30,14 +31,26 @@ public class FXConstroller : MonoBehaviour
     }
     IEnumerator Log(){
         textLog.text = log; 
+        switch(typeLog)
+        {
+            case "life": 
+                textLog.color = Color.red; 
+                break; 
+            case "score": 
+                textLog.color = Color.yellow; 
+                break; 
+            default:
+                textLog.color = Color.white; 
+                break; 
+        }
         canvasAnimator.SetTrigger("playerLog"); 
         yield return new WaitForSeconds(.5f); 
         log = null; 
         cd = true; 
         startLog = false; 
     }
-    public static void SetLog(string text){
-        log = text; 
+    public static void SetLog(float text){
+        log = text.ToString(); 
         startLog = true; 
     }
 }

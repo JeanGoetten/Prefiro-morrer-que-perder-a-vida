@@ -194,17 +194,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab05c32e8c1f8294b90606541292d59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsModifierLife: 2
-  statsModifierPower: 3
-  statsModifierSpeed: 4
-  statsModifierScore: 5
+  statsModifierLife: -5
+  statsModifierPower: 0
+  statsModifierSpeed: 0
+  statsModifierScore: 0
   flat: 1
   percent: 0
   lifeStat: 1
   powerStat: 0
   speedStat: 0
   scoreStat: 0
-  scoreValue: 0
+  scoreValue: 5
   leftClick:
     m_PersistentCalls:
       m_Calls: []

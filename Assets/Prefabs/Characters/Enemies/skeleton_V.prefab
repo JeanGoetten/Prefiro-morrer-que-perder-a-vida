@@ -489,7 +489,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 2.5}
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 15
 --- !u!95 &5077894851144023059
 Animator:
   serializedVersion: 5
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab05c32e8c1f8294b90606541292d59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsModifierLife: -5
+  statsModifierLife: -15
   statsModifierPower: 0
   statsModifierSpeed: 0
   statsModifierScore: 0
@@ -557,7 +557,7 @@ MonoBehaviour:
   powerStat: 0
   speedStat: 0
   scoreStat: 0
-  scoreValue: 10
+  scoreValue: 15
   leftClick:
     m_PersistentCalls:
       m_Calls: []

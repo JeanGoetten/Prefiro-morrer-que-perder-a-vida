@@ -7494,9 +7494,9 @@ MonoBehaviour:
   autoFirstSpawn: 1
   autoEnemiesAmount: 4
   enemiesList:
-  - {fileID: 5077894851144023057, guid: 66d154e461234294a8b900c088527819, type: 3}
   - {fileID: 6084762662973540855, guid: 8c874114e6f0fd84694029290780770d, type: 3}
   - {fileID: 2054241614704091527, guid: c4c2e045599e78d46a05c4bf0c0811bb, type: 3}
+  - {fileID: 5077894851144023057, guid: 66d154e461234294a8b900c088527819, type: 3}
 --- !u!1 &2003148768
 GameObject:
   m_ObjectHideFlags: 0
