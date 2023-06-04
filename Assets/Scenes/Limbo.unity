@@ -1390,6 +1390,8 @@ GameObject:
   - component: {fileID: 463150394}
   - component: {fileID: 463150393}
   - component: {fileID: 463150398}
+  - component: {fileID: 463150400}
+  - component: {fileID: 463150399}
   m_Layer: 0
   m_Name: Mimic
   m_TagString: Mimic
@@ -1491,7 +1493,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463150390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9.046196}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1563,6 +1565,48 @@ MonoBehaviour:
   - 'Fucking idiot... '
   randomTalk: []
   goodbyTalk: []
+--- !u!114 &463150399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463150390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d77d53f4910064d8b87cdeb6db12bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefaultTexture: {fileID: 2800000, guid: 8bdcdbe5041e30946bfda293a3604de7,
+    type: 3}
+  cursor_01Texture: {fileID: 2800000, guid: f346f51d80189c6488d556cb60ced603, type: 3}
+  hotSpot: {x: 0, y: 0, z: 0}
+--- !u!61 &463150400
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463150390}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.076982975, y: -2.1298409}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.673327, y: 11.828827}
+  m_EdgeRadius: 0
 --- !u!1 &466926042
 GameObject:
   m_ObjectHideFlags: 0
@@ -4610,7 +4654,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  duration: 0.1
 --- !u!81 &1261361061
 AudioListener:
   m_ObjectHideFlags: 0

@@ -51,7 +51,7 @@ MonoBehaviour:
   fireRate: 0.5
   magazineSize: 5
   reloadTime: 0.5
-  screenShakeForce: 0
+  screenShakeForce: 0.5
   sprite: {fileID: 21300000, guid: c13837cfa18a3f448a0775302a327058, type: 3}
   bullet: {fileID: 4253991307768324765, guid: 347f10c474c78534e890bc68bf9cbcf6, type: 3}
 --- !u!114 &5644101016770433462

@@ -17,4 +17,7 @@ public class WeaponStats : MonoBehaviour
     public Sprite sprite; 
 
     public GameObject bullet; 
+    private void Update() {
+        ScreenShake.duration = screenShakeForce; 
+    }
 }
