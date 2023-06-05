@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{db02c258-34cf-2ca1-22e1-e0550615abd3}</ProjectGuid>
+    <ProjectGuid>{9ece2166-e8bd-b695-b73d-5ebbad36e381}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -341,31 +341,31 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\PackageCache\com.unity.analytics@3.6.12\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\PackageCache\com.unity.analytics@3.6.12\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -734,151 +734,151 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Purchasing.Common">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityStub">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Analytics">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Analytics.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Codeless">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Monetization">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.Monetization.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.Monetization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Analytics.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Analytics">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityCore">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Environments">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Stores">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
-        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida-main\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
+        <HintPath>D:\Unity\Prefiro-morrer-que-perder-a-vida\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

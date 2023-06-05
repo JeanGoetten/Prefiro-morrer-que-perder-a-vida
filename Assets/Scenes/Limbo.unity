@@ -437,6 +437,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60bdc91b972f9e74d8ebcc0b1fe10879, type: 3}
+--- !u!4 &481970472 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1712065394272383986, guid: 05143c8e4110d214393ee93e10af27d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1924494467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &513827373
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +565,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!4 &551967400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1712065394289670077, guid: 05143c8e4110d214393ee93e10af27d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1924494467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &577763819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,6 +1461,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5454008618017373968, guid: 0aeae4e6ea61d2d48808da3109a209f1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5454008618869619816, guid: 0aeae4e6ea61d2d48808da3109a209f1,
         type: 3}
       propertyPath: m_RootOrder
@@ -1508,6 +1525,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: == Wall Collider ==
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454008619774667227, guid: 0aeae4e6ea61d2d48808da3109a209f1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7453265
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454008619774667227, guid: 0aeae4e6ea61d2d48808da3109a209f1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -16.242
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454008619905977488, guid: 0aeae4e6ea61d2d48808da3109a209f1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1515731
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454008619905977488, guid: 0aeae4e6ea61d2d48808da3109a209f1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.9584
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454008620015801989, guid: 0aeae4e6ea61d2d48808da3109a209f1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454008620015801989, guid: 0aeae4e6ea61d2d48808da3109a209f1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aeae4e6ea61d2d48808da3109a209f1, type: 3}
@@ -2273,7 +2320,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0137655735, y: 0.36680365}
+  m_Offset: {x: 0.0137655735, y: -0.9164472}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2284,7 +2331,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 6.321168}
+  m_Size: {x: 3, y: 3.7546663}
   m_EdgeRadius: 0
 --- !u!50 &1809188268
 Rigidbody2D:
@@ -2422,9 +2469,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  limboPositionForCam: {fileID: 0}
-  passPositionForCam: {fileID: 0}
-  adventurePositionForCam: {fileID: 0}
+  limboPositionForCam: {fileID: 481970472}
+  passPositionForCam: {fileID: 551967400}
+  adventurePositionForCam: {fileID: 2102759958}
   camera: {fileID: 318285645}
 --- !u!114 &1809188274
 MonoBehaviour:
@@ -2634,6 +2681,12 @@ Transform:
   m_Father: {fileID: 1279768681}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2102759958 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1712065393361643525, guid: 05143c8e4110d214393ee93e10af27d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1924494467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2106735782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2325775575485891123, guid: e5c8e81f4d591e94297ee357803ff6d3,
