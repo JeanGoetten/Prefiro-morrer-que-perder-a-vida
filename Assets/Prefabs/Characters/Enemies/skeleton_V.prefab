@@ -527,10 +527,10 @@ MonoBehaviour:
   followSpeed: 0.5
   level: 0
   timeToRespawn: 1
-  leftPoint: -28.8
-  rightPoint: 30
-  UPPoint: 54
-  DownPoint: 23.2
+  leftPoint: 23
+  rightPoint: 63
+  UPPoint: 45
+  DownPoint: 23
   movingHorizontal: 1
   movingVertical: 1
   canDamage: 0
