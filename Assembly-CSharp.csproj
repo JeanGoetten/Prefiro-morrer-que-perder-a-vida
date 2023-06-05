@@ -48,8 +48,10 @@
      <Compile Include="Assets\Scripts\Mimic\MimicSpawn.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemies\EnemyStats.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\PlayerAction.cs" />
+     <Compile Include="Assets\Scripts\UI\CursorController.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StatModifier.cs" />
      <Compile Include="Assets\Scripts\Bag\Pickup.cs" />
+     <Compile Include="Assets\Scripts\Mimic\CursorChange.cs" />
      <Compile Include="Assets\Scripts\Items\Weapon\WeaponController.cs" />
      <Compile Include="Assets\Scripts\Adventure\Obstacle_1.cs" />
      <Compile Include="Assets\Scripts\Camera\PlayerTriggerPosition.cs" />
@@ -70,8 +72,6 @@
      <Compile Include="Assets\Scripts\Mimic\MimicTalk.cs" />
      <Compile Include="Assets\Scripts\Bag\Slot.cs" />
      <Compile Include="Assets\Scripts\Items\ItemStat.cs" />
-     <Compile Include="Assets\Scripts\UI\CursorController.cs" />
-     <Compile Include="Assets\Scripts\Mimic\CursorChange.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
