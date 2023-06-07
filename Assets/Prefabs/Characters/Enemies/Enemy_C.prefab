@@ -170,15 +170,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aead96ce83bb2804196813c09897e919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 6
-  verticalSpeed: 6
-  followSpeed: 0
-  level: 0.70000005
-  timeToRespawn: 3
-  leftPoint: 23
-  rightPoint: 63
-  UPPoint: 45
-  DownPoint: 13
+  horizontalSpeed: 3
+  verticalSpeed: 3
+  followSpeed: 0.5
+  level: 0
+  timeToRespawn: 1
+  leftPoint: 18.5
+  rightPoint: 63.5
+  UPPoint: 46.35
+  DownPoint: 11.68
   movingHorizontal: 1
   movingVertical: 1
   canDamage: 0

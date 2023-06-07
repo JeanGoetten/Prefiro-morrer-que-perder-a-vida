@@ -170,19 +170,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aead96ce83bb2804196813c09897e919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 2
-  verticalSpeed: 2
-  followSpeed: 0
+  horizontalSpeed: 3
+  verticalSpeed: 3
+  followSpeed: 0.5
   level: 0
   timeToRespawn: 1
-  leftPoint: 23
-  rightPoint: 63
-  UPPoint: 45
-  DownPoint: 13
+  leftPoint: 18.5
+  rightPoint: 63.5
+  UPPoint: 46.35
+  DownPoint: 11.68
   movingHorizontal: 1
   movingVertical: 1
   canDamage: 0
-  damageCooldownTime: 0
+  damageCooldownTime: 1
 --- !u!114 &-4142679067410186133
 MonoBehaviour:
   m_ObjectHideFlags: 0

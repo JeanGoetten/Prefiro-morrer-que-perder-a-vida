@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5145288553937598832}
   - component: {fileID: 630603922332374273}
   m_Layer: 0
-  m_Name: Weapon_0
+  m_Name: 0+weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

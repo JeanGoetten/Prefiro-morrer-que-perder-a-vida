@@ -154,9 +154,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19004081, y: -0.33622646}
+  m_Offset: {x: 0.3054879, y: -0.935752}
   serializedVersion: 2
-  m_Radius: 0.60232866
+  m_Radius: 1.2347064
 --- !u!114 &6084762662973540854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,15 +169,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aead96ce83bb2804196813c09897e919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 4
-  verticalSpeed: 4
-  followSpeed: 0
+  horizontalSpeed: 3
+  verticalSpeed: 3
+  followSpeed: 0.5
   level: 0
-  timeToRespawn: 2
-  leftPoint: 23
-  rightPoint: 63
-  UPPoint: 45
-  DownPoint: 13
+  timeToRespawn: 1
+  leftPoint: 18.5
+  rightPoint: 63.5
+  UPPoint: 46.35
+  DownPoint: 11.68
   movingHorizontal: 1
   movingVertical: 1
   canDamage: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab05c32e8c1f8294b90606541292d59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsModifierLife: -5
+  statsModifierLife: -1
   statsModifierPower: 0
   statsModifierSpeed: 0
   statsModifierScore: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   powerStat: 0
   speedStat: 0
   scoreStat: 0
-  scoreValue: 5
+  scoreValue: 3
   leftClick:
     m_PersistentCalls:
       m_Calls: []
