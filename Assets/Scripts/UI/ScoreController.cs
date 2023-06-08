@@ -11,7 +11,7 @@ public class ScoreController : MonoBehaviour
 
      private StatsPlayer statsPlayer; 
 
-     public float highScore = 0; 
+     public static float highScore = 0; 
 
      private void Start() {
         statsPlayer = GameObject.FindWithTag("Player").GetComponent<StatsPlayer>(); 

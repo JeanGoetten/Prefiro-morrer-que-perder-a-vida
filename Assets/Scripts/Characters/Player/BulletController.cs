@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    public float lifeTime; 
+    public static float lifeTime = 1f; 
     // Start is called before the first frame update
     void Start()
     {

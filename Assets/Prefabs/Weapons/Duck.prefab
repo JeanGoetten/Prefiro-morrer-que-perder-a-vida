@@ -45,13 +45,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08259cae9138704fb1bd332cd064e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: 1
+  model: Duck
+  freeFire: 0
   force: 15
   damage: 1
-  fireRate: 2
+  fireRate: 1
   magazineSize: 5
   reloadTime: 0.5
   screenShakeForce: 0.1
+  bulletLifeTime: 1
   sprite: {fileID: 21300000, guid: 851e0a856ae4c0649a90e9ae64b28e6c, type: 3}
   bullet: {fileID: 4253991307768324765, guid: 347f10c474c78534e890bc68bf9cbcf6, type: 3}
 --- !u!114 &-2111746400217906827

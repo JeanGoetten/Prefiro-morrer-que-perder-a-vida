@@ -15,6 +15,8 @@ public class Shooting : MonoBehaviour
 
     private float fireTime; 
 
+    private bool freeFire = true; 
+
     private void Start() {
         canShoot = false; 
         fireTime = 0; 
@@ -24,10 +26,12 @@ public class Shooting : MonoBehaviour
         bulletPrefab = WeaponController.bullet; 
         bulletForce = WeaponController.force; 
 
+        freeFire = MimicSpawn.freeFire; 
+
         fireTime += Time.deltaTime; 
         //Debug.Log(fireTime);
 
-        if(fireTime > WeaponController.fireRate){
+        if(fireTime > 1/WeaponController.fireRate){
             Shoot(); 
         }else{
             // cant shoot
@@ -35,17 +39,33 @@ public class Shooting : MonoBehaviour
     }
 
     private void Shoot(){
-        if(Input.GetMouseButtonDown(0)){
+        if(freeFire){
+            if(Input.GetMouseButton(0)){
             //Shoot Animation 
             
             // verify and instatiate 
-            if(!PauseGame.gameIsPaused && canShoot){
-                camera.GetComponent<ScreenShake>().start = true; 
-                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
-                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>(); 
-                rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse); 
-                fireTime = 0; 
+                if(!PauseGame.gameIsPaused && canShoot){
+                    camera.GetComponent<ScreenShake>().start = true; 
+                    GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
+                    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>(); 
+                    rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse); 
+                    fireTime = 0; 
+                }
+            }   
+        }else{
+            if(Input.GetMouseButtonDown(0)){
+            //Shoot Animation 
+            
+            // verify and instatiate 
+                if(!PauseGame.gameIsPaused && canShoot){
+                    camera.GetComponent<ScreenShake>().start = true; 
+                    GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
+                    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>(); 
+                    rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse); 
+                    fireTime = 0; 
+                }
             }
         }
+        
     }
 }

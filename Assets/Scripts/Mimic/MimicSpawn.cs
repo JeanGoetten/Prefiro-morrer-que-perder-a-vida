@@ -11,7 +11,9 @@ public class MimicSpawn : MonoBehaviour
 
     public static int randomIndex; 
 
-    private int lastRandomIndex; 
+    public static int lastRandomIndex; 
+
+    public static bool freeFire; 
 
     private void Start() {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>(); 
@@ -40,7 +42,8 @@ public class MimicSpawn : MonoBehaviour
             }
             
 
-            Debug.Log("nova arma");
+            Debug.Log(item.name);
+            freeFire = item.GetComponent<WeaponStats>().freeFire; 
 
             lastRandomIndex = randomIndex; 
             // for(int i = 0; i < inventory.slots.Length; i++)
