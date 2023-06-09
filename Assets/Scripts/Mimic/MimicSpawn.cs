@@ -15,6 +15,8 @@ public class MimicSpawn : MonoBehaviour
 
     public static bool freeFire; 
 
+    public AudioClip SFX_Shot; 
+
     private void Start() {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>(); 
         randomIndex = 0; 
@@ -44,6 +46,7 @@ public class MimicSpawn : MonoBehaviour
 
             Debug.Log(item.name);
             freeFire = item.GetComponent<WeaponStats>().freeFire; 
+            SFX_Shot = item.GetComponent<WeaponStats>().SFX_Shot; 
 
             lastRandomIndex = randomIndex; 
             // for(int i = 0; i < inventory.slots.Length; i++)

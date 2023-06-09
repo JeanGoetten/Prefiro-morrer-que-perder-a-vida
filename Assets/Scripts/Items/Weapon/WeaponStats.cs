@@ -19,6 +19,8 @@ public class WeaponStats : MonoBehaviour
     public Sprite sprite; 
 
     public GameObject bullet; 
+
+    public AudioClip SFX_Shot; 
     private void Update() {
         ScreenShake.duration = screenShakeForce; 
         BulletController.lifeTime = bulletLifeTime; 

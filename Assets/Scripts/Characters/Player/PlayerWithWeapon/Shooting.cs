@@ -17,9 +17,15 @@ public class Shooting : MonoBehaviour
 
     private bool freeFire = true; 
 
+    new AudioSource audio; 
+
+    public MimicSpawn mimicSpawn; 
+
     private void Start() {
         canShoot = false; 
         fireTime = 0; 
+
+        audio = GetComponent<AudioSource>();
     }
 
     private void Update() {
@@ -50,6 +56,7 @@ public class Shooting : MonoBehaviour
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>(); 
                     rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse); 
                     fireTime = 0; 
+                    audio.PlayOneShot(mimicSpawn.SFX_Shot);
                 }
             }   
         }else{
@@ -63,6 +70,7 @@ public class Shooting : MonoBehaviour
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>(); 
                     rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse); 
                     fireTime = 0; 
+                    audio.PlayOneShot(mimicSpawn.SFX_Shot);
                 }
             }
         }
