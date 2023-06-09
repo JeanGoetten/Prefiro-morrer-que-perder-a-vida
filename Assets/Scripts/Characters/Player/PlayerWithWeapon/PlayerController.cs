@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro; 
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,15 @@ public class PlayerController : MonoBehaviour
     public GameObject aimGORight; 
     public GameObject aimGOLeft; 
 
+    public GameObject endMenuPanel; 
+
+    public TMP_Text txtBodyCount; 
+
+    new public AudioSource audio; 
+    public AudioClip SFX_playerDie; 
+
+    private bool playerAlive; 
+
     private void Start() {
         statsPlayer = GetComponent<StatsPlayer>(); 
 
@@ -23,10 +33,16 @@ public class PlayerController : MonoBehaviour
 
         aimGORight.SetActive(false); 
         aimGOLeft.SetActive(false); 
+
+        endMenuPanel.SetActive(false);
+
+        playerAlive = true; 
+
+        //EnemiesSpawnController.bodyCount = 0; 
     }
     void Update()
     {
-        if(statsPlayer.life.Value <= 0){
+        if(statsPlayer.life.Value <= 0 && playerAlive){
             PlayerDied(); 
         }
         if(Shooting.canShoot){
@@ -38,8 +54,13 @@ public class PlayerController : MonoBehaviour
         }
     }
     public void PlayerDied(){
-        EnemiesSpawnController.bodyCount = 0; 
-        SceneManager.LoadScene("Limbo");
+        playerAlive = false; 
+        audio.clip = SFX_playerDie; 
+        audio.Play(); 
+        txtBodyCount.text = EnemiesSpawnController.bodyCount.ToString();
+        endMenuPanel.SetActive(true);
+        Time.timeScale = 0f;
+
         //Debug.Log("Player died!");
 
         // Player die animation 
@@ -58,5 +79,8 @@ public class PlayerController : MonoBehaviour
 
         // // Item reroll
         // GameObject.FindGameObjectWithTag("Mimic").GetComponent<MimicSpawn>().itemSpawnAvaiable = true; 
+    }
+    public void Restart(){
+        SceneManager.LoadScene("Limbo");
     }
 }

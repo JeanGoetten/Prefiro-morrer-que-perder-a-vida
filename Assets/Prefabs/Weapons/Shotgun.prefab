@@ -47,13 +47,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: Shotgun
   freeFire: 0
-  force: 45
+  force: 30
   damage: 3
   fireRate: 2
   magazineSize: 5
   reloadTime: 0.5
   screenShakeForce: 0.5
-  bulletLifeTime: 3
+  bulletLifeTime: 0.5
   sprite: {fileID: 21300000, guid: f97afe2d4e342da409b615ea6192758d, type: 3}
   bullet: {fileID: 4253991307768324765, guid: 347f10c474c78534e890bc68bf9cbcf6, type: 3}
   SFX_Shot: {fileID: 8300000, guid: 92d1dd5a35ee2ef40b2e652b80f02663, type: 3}

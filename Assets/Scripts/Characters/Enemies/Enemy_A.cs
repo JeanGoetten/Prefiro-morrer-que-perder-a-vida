@@ -7,19 +7,27 @@ public class Enemy_A : MonoBehaviour
     [Range(0, 50)] public float horizontalSpeed;
     [Range(0, 50)] public float verticalSpeed; 
     [Range(0, 50)] public float followSpeed; 
-    public float level = 0.0f;
-    public float timeToRespawn = 0.0f;
     //[Range(0, 1000)] public float speedRotation = 1.0f; 
     public float leftPoint, rightPoint, UPPoint, DownPoint; 
-    public bool movingHorizontal = true, movingVertical = true; 
+    private bool movingHorizontal = true, movingVertical = true; 
+
+    public float level = 0.0f;
+    public float timeToRespawn = 0.0f;
 
     Vector3 localScale; 
     Rigidbody2D rb; 
 
     private ItemStat itemStat; 
 
-    public bool canDamage; 
+    private bool canDamage; 
     public float damageCooldownTime; 
+
+    new public AudioSource audio; 
+    public AudioClip SFX_playerHurt; 
+    public AudioClip SFX_atack; 
+    public AudioClip SFX_chase; 
+
+    public GameObject FX_toDie; 
 
     private void Start() {
         localScale = transform.localScale; 
@@ -29,6 +37,7 @@ public class Enemy_A : MonoBehaviour
         itemStat = GetComponent<ItemStat>(); 
 
         canDamage = true; 
+
     }
     void Update()
     {
@@ -89,6 +98,8 @@ public class Enemy_A : MonoBehaviour
             EnemiesSpawnController.bodyCount++; 
             EnemiesSpawnController.enemyKilled = true;  
             itemStat.DropItem(); 
+
+            Instantiate(FX_toDie, transform.position, transform.rotation); 
             
             Destroy(other.gameObject);
             Destroy(this.gameObject);
@@ -108,6 +119,7 @@ public class Enemy_A : MonoBehaviour
         }
         if(other.gameObject.tag == "Player"){
             //Debug.Log("Player hurted!");
+            audio.PlayOneShot(SFX_playerHurt); 
             itemStat.UseItem(); 
         }
     }
@@ -116,6 +128,7 @@ public class Enemy_A : MonoBehaviour
         if(other.gameObject.tag == "Player"){
             //Debug.Log("Player hurted!");
             if(canDamage){
+                audio.PlayOneShot(SFX_playerHurt); 
                 itemStat.UseItem(); 
                 StartCoroutine(InvulnerableTime()); 
             }
@@ -139,6 +152,12 @@ public class Enemy_A : MonoBehaviour
             }
         }else{
             // berro 
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag == "Player")
+        {
+            audio.PlayOneShot(SFX_chase); 
         }
     }
     IEnumerator InvulnerableTime(){

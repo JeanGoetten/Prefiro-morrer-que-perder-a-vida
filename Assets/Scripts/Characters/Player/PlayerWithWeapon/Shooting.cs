@@ -8,16 +8,16 @@ public class Shooting : MonoBehaviour
     public static bool canShoot; 
 
     public Transform firePoint; 
-    public GameObject bulletPrefab; 
+    private GameObject bulletPrefab; 
     public new Transform camera; 
 
-    public float bulletForce = 20f; 
+    private float bulletForce; 
 
     private float fireTime; 
 
     private bool freeFire = true; 
 
-    new AudioSource audio; 
+    new public AudioSource audio; 
 
     public MimicSpawn mimicSpawn; 
 
@@ -25,7 +25,6 @@ public class Shooting : MonoBehaviour
         canShoot = false; 
         fireTime = 0; 
 
-        audio = GetComponent<AudioSource>();
     }
 
     private void Update() {

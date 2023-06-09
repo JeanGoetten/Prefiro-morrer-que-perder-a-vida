@@ -15,7 +15,7 @@ public class PlayerTriggerPosition : MonoBehaviour
     private bool passTriggred; 
     private bool adventureTriggred; 
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
             if(other.tag == "Limbo"){
                 

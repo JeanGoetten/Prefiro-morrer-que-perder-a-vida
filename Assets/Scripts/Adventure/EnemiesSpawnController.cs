@@ -22,6 +22,8 @@ public class EnemiesSpawnController : MonoBehaviour
     public List<GameObject> enemiesList; 
 
     private void Start() {
+
+        bodyCount = 0; 
         levelUpAmout = 0f; 
         waveCount = 0; 
 

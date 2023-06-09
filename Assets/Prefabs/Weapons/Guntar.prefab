@@ -47,13 +47,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: Guntar
   freeFire: 1
-  force: 30
-  damage: 2
-  fireRate: 5
+  force: 50
+  damage: 1
+  fireRate: 10
   magazineSize: 5
   reloadTime: 0.5
   screenShakeForce: 0.25
-  bulletLifeTime: 2
+  bulletLifeTime: 0.4
   sprite: {fileID: 21300000, guid: 28c01bf407fc08447a99c8f061dfbf9a, type: 3}
   bullet: {fileID: 4253991307768324765, guid: 347f10c474c78534e890bc68bf9cbcf6, type: 3}
   SFX_Shot: {fileID: 8300000, guid: f89b662c46caca44ebc76844c5929327, type: 3}
