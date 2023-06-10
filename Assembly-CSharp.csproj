@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Characters\Enemies\Enemy_A.cs" />
      <Compile Include="Assets\Scripts\UI\SpeechController.cs" />
+     <Compile Include="Assets\Scripts\FX\FX_Enemy_Die.cs" />
      <Compile Include="Assets\Scripts\Camera\BasicCameraFollow.cs" />
      <Compile Include="Assets\Scripts\Adventure\EnemiesSpawnController.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\Shooting.cs" />
@@ -72,7 +73,6 @@
      <Compile Include="Assets\Scripts\Mimic\MimicTalk.cs" />
      <Compile Include="Assets\Scripts\Bag\Slot.cs" />
      <Compile Include="Assets\Scripts\Items\ItemStat.cs" />
-     <Compile Include="Assets\Scripts\FX\FX_Enemy_Die.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

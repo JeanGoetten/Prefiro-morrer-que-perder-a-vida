@@ -21,8 +21,13 @@ public class PlayerController : MonoBehaviour
 
     new public AudioSource audio; 
     public AudioClip SFX_playerDie; 
+    public AudioClip sfx_btnClick; 
 
     private bool playerAlive; 
+
+    public Animator anim; 
+
+    public Collider2D playerCollider; 
 
     private void Start() {
         statsPlayer = GetComponent<StatsPlayer>(); 
@@ -55,11 +60,14 @@ public class PlayerController : MonoBehaviour
     }
     public void PlayerDied(){
         playerAlive = false; 
-        audio.clip = SFX_playerDie; 
-        audio.Play(); 
+        audio.Stop(); 
+        audio.PlayOneShot(SFX_playerDie); 
         txtBodyCount.text = EnemiesSpawnController.bodyCount.ToString();
         endMenuPanel.SetActive(true);
-        Time.timeScale = 0f;
+        // Time.timeScale = 0f;
+        playerCollider.enabled = false; 
+        Shooting.canShoot = false; 
+        
 
         //Debug.Log("Player died!");
 
@@ -81,6 +89,13 @@ public class PlayerController : MonoBehaviour
         // GameObject.FindGameObjectWithTag("Mimic").GetComponent<MimicSpawn>().itemSpawnAvaiable = true; 
     }
     public void Restart(){
+        audio.Stop(); 
+        audio.PlayOneShot(sfx_btnClick); 
+        anim.SetTrigger("fadeIn"); 
+        StartCoroutine(cd()); 
+    }
+    IEnumerator cd(){
+        yield return new WaitForSeconds(2); 
         SceneManager.LoadScene("Limbo");
     }
 }
