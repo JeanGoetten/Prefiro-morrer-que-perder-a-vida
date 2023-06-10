@@ -10,6 +10,7 @@ public class FX_Enemy_Die : MonoBehaviour
     {
         audio = GetComponent<AudioSource>(); 
         audio.PlayOneShot(SFX_clipToDie); 
+        StartCoroutine(CD_To_Die()); 
     }
     IEnumerator CD_To_Die(){
         yield return new WaitForSeconds(SFX_clipToDie.length); 
