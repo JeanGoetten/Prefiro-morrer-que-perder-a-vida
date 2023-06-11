@@ -7336,6 +7336,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 310921876}
+  FX_shoot: {fileID: 6241730419521627399, guid: 4e44d3ece82fb394da551e7e002ecf2f,
+    type: 3}
   camera: {fileID: 318285645}
   audio: {fileID: 1809188278}
   mimicSpawn: {fileID: 1569707775}
@@ -7874,18 +7876,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x_RightLimit: 60
-  x_LeftLimit: 20
-  y_UpLimit: 42
-  y_DownLimit: 12
+  x_LeftLimit: 24
+  y_UpLimit: 40
+  y_DownLimit: 12.6
   bodyCountToFirstNewWave: 10
   newWaveEvery: 10
   levelUpIncrease: 0.1
   autoFirstSpawn: 1
-  autoEnemiesAmount: 5
+  autoEnemiesAmount: 4
+  FX_SummounCircle: {fileID: 8815616556344529139, guid: 94c1a1b0b2593884a88fe67dd18b64dd,
+    type: 3}
   enemiesList:
-  - {fileID: 7650566693642775029, guid: 38763ae2cbaab9340a3445ea7f0cc90c, type: 3}
   - {fileID: 818111388504768846, guid: 998a5fb60497d274b997d5bef4da590d, type: 3}
   - {fileID: 5077894851144023057, guid: 66d154e461234294a8b900c088527819, type: 3}
+  - {fileID: 7650566693642775029, guid: 38763ae2cbaab9340a3445ea7f0cc90c, type: 3}
 --- !u!4 &1879030647
 Transform:
   m_ObjectHideFlags: 0

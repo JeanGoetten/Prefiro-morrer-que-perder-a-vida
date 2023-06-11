@@ -19,6 +19,8 @@ public class EnemiesSpawnController : MonoBehaviour
     public bool autoFirstSpawn = false; 
     public int autoEnemiesAmount = 0; 
 
+    public GameObject FX_SummounCircle; 
+
     public List<GameObject> enemiesList; 
 
     private void Start() {
@@ -76,6 +78,8 @@ public class EnemiesSpawnController : MonoBehaviour
 
         yield return new WaitForSeconds(enemiesList[waveCount].GetComponent<Enemy_A>().timeToRespawn);
 
+        Instantiate(FX_SummounCircle, new Vector3(x, y, 0), Quaternion.identity);
+        yield return new WaitForSeconds(enemiesList[waveCount].GetComponent<Enemy_A>().timeAfterFXSummon);
         Instantiate(enemiesList[waveCount], new Vector3(x, y, 0), Quaternion.identity);
     } 
 }

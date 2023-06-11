@@ -9,6 +9,7 @@ public class Shooting : MonoBehaviour
 
     public Transform firePoint; 
     private GameObject bulletPrefab; 
+    public GameObject FX_shoot; 
     public new Transform camera; 
 
     private float bulletForce; 
@@ -52,6 +53,7 @@ public class Shooting : MonoBehaviour
                 if(!PauseGame.gameIsPaused && canShoot){
                     camera.GetComponent<ScreenShake>().start = true; 
                     GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
+                    Instantiate(FX_shoot, firePoint.position, firePoint.rotation); 
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>(); 
                     rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse); 
                     fireTime = 0; 
@@ -66,6 +68,7 @@ public class Shooting : MonoBehaviour
                 if(!PauseGame.gameIsPaused && canShoot){
                     camera.GetComponent<ScreenShake>().start = true; 
                     GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
+                    Instantiate(FX_shoot, firePoint.position, firePoint.rotation); 
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>(); 
                     rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse); 
                     fireTime = 0; 

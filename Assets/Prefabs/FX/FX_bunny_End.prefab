@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SFX_clipToDie: {fileID: 8300000, guid: 53fad1d6eb4d5d746b81c1409a51828a, type: 3}
+  SFX_Time: 0
+  manualTime: 0.5
 --- !u!95 &5349853218045682201
 Animator:
   serializedVersion: 5

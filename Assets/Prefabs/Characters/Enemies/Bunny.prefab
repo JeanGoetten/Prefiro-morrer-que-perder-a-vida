@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818111388504768846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: -15.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9008848, y: 0.90594226, z: 0.9501}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 262c3dd1e12375e439710dbcfb6cbc1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 3.9, y: 3.91}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &818111388504768840
@@ -264,6 +264,7 @@ MonoBehaviour:
   DownPoint: 11.68
   level: 0
   timeToRespawn: 1
+  timeAfterFXSummon: 0.3
   damageCooldownTime: 1
   audio: {fileID: 4522157743823755713}
   SFX_playerHurt: {fileID: 8300000, guid: e526754462692414582f17353386bbd3, type: 3}
@@ -271,6 +272,9 @@ MonoBehaviour:
   SFX_chase: {fileID: 0}
   FX_toDie: {fileID: 1908530457019813427, guid: 58f7041dd3c5beb458e3bc243e17cb43,
     type: 3}
+  FX_impact: {fileID: 590191178054637354, guid: 11c632932cb94e142a5e5d9d5b6c6861,
+    type: 3}
+  spawnAnimationTime: 1
 --- !u!114 &4522157743823755724
 MonoBehaviour:
   m_ObjectHideFlags: 0

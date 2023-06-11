@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class Enemy_A : MonoBehaviour
 
     public float level = 0.0f;
     public float timeToRespawn = 0.0f;
+    public float timeAfterFXSummon = 0.0f;
 
     Vector3 localScale; 
     Rigidbody2D rb; 
@@ -28,8 +30,13 @@ public class Enemy_A : MonoBehaviour
     public AudioClip SFX_chase; 
 
     public GameObject FX_toDie; 
+    public GameObject FX_impact; 
 
     Animator anim; 
+    public float spawnAnimationTime = 0.1f; 
+    private float spawnAnimationTimeControll; 
+
+    private bool spawned; 
 
     private void Start() {
         localScale = transform.localScale; 
@@ -42,34 +49,47 @@ public class Enemy_A : MonoBehaviour
 
         anim = GetComponent<Animator>(); 
 
+        spawned = false; 
+
+        spawnAnimationTimeControll = 0f; 
+
+    }
+    private void FixedUpdate(){
+        spawnAnimationTimeControll += Time.deltaTime; 
+        
     }
     void Update()
     {
-        if(transform.position.x > rightPoint){
+        if(spawnAnimationTimeControll >= spawnAnimationTime){
+            spawned = true; 
+        }
+        if(spawned){
+            if(transform.position.x > rightPoint){
             movingHorizontal = false; 
-        }
-        if(transform.position.x < leftPoint){
-            movingHorizontal = true; 
-        }
-        if(movingHorizontal){
-            MoveRight(); 
-        }
-        else{
-            MoveLeft(); 
-        }
-        
-        if(transform.position.y > UPPoint)
-        {
-            movingVertical = false; 
-        }
-        if(transform.position.y < DownPoint)
-        {
-            movingVertical = true; 
-        }
-        if(movingVertical){
-            MoveUP(); 
-        }else{
-            MoveDown(); 
+            }
+            if(transform.position.x < leftPoint){
+                movingHorizontal = true; 
+            }
+            if(movingHorizontal){
+                MoveRight(); 
+            }
+            else{
+                MoveLeft(); 
+            }
+            
+            if(transform.position.y > UPPoint)
+            {
+                movingVertical = false; 
+            }
+            if(transform.position.y < DownPoint)
+            {
+                movingVertical = true; 
+            }
+            if(movingVertical){
+                MoveUP(); 
+            }else{
+                MoveDown(); 
+            }
         }
         //transform.eulerAngles += new Vector3(0, 0, speedRotation);
     }
@@ -103,6 +123,8 @@ public class Enemy_A : MonoBehaviour
             EnemiesSpawnController.enemyKilled = true;  
             itemStat.DropItem(); 
 
+
+            Instantiate(FX_impact, transform.position, transform.rotation); 
             Instantiate(FX_toDie, transform.position, transform.rotation); 
             
             Destroy(other.gameObject);
@@ -143,18 +165,20 @@ public class Enemy_A : MonoBehaviour
     void OnTriggerStay2D(Collider2D other){
         if(other.gameObject.tag == "Player")
         {
-            Vector3 targetPos = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, transform.position.z);
-		    Vector3 velocity = (targetPos - transform.position) * followSpeed;
-		    transform.position = Vector3.SmoothDamp (transform.position, targetPos, ref velocity, 1.0f, Time.deltaTime);
+            if(spawned){
+                Vector3 targetPos = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, transform.position.z);
+                Vector3 velocity = (targetPos - transform.position) * followSpeed;
+                transform.position = Vector3.SmoothDamp (transform.position, targetPos, ref velocity, 1.0f, Time.deltaTime);
 
-            if(other.gameObject.transform.position.x <= transform.position.x + 2f){
-                MoveLeft(); 
-                //Debug.Log("player à esquerda");
-            }else if(other.gameObject.transform.position.x > transform.position.x - 2f){
-                MoveRight(); 
-                //Debug.Log("player à direita");
-            }else{
-                //MoveRight(); 
+                if(other.gameObject.transform.position.x <= transform.position.x + 2f){
+                    MoveLeft(); 
+                    //Debug.Log("player à esquerda");
+                }else if(other.gameObject.transform.position.x > transform.position.x - 2f){
+                    MoveRight(); 
+                    //Debug.Log("player à direita");
+                }else{
+                    //MoveRight(); 
+                }
             }
         }else{
             // berro 

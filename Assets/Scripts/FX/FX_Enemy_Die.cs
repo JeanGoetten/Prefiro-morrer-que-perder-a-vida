@@ -6,6 +6,8 @@ public class FX_Enemy_Die : MonoBehaviour
 {
     new AudioSource audio; 
     public AudioClip SFX_clipToDie; 
+    public bool SFX_Time; 
+    public float manualTime = 0.1f; 
     void Start()
     {
         audio = GetComponent<AudioSource>(); 
@@ -13,7 +15,11 @@ public class FX_Enemy_Die : MonoBehaviour
         StartCoroutine(CD_To_Die()); 
     }
     IEnumerator CD_To_Die(){
-        yield return new WaitForSeconds(SFX_clipToDie.length); 
+        if(SFX_Time){
+            yield return new WaitForSeconds(SFX_clipToDie.length); 
+        }else{
+            yield return new WaitForSeconds(manualTime); 
+        }
         Destroy(this.gameObject); 
     }
 }

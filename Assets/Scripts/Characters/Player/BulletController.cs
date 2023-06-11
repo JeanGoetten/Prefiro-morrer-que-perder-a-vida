@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     public static float lifeTime = 1f; 
-    // Start is called before the first frame update
+    public GameObject FX_impact; 
     void Start()
     {
         StartCoroutine(DeathDelay()); 
@@ -19,6 +19,7 @@ public class BulletController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Wall")
         {
+            Instantiate(FX_impact, transform.position, transform.rotation); 
             Destroy(this.gameObject);
         }
     }
