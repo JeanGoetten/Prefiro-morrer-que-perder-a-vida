@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_A : MonoBehaviour
+public class Enemy_Atack : MonoBehaviour
 {
     [Range(0, 50)] public float horizontalSpeed;
     [Range(0, 50)] public float verticalSpeed; 
@@ -123,7 +123,6 @@ public class Enemy_A : MonoBehaviour
         }
         if(other.gameObject.tag == "Player"){
             //Debug.Log("Player hurted!");
-            anim.SetTrigger("atack"); 
             audio.PlayOneShot(SFX_playerHurt); 
             itemStat.UseItem(); 
         }
@@ -133,8 +132,8 @@ public class Enemy_A : MonoBehaviour
         if(other.gameObject.tag == "Player"){
             //Debug.Log("Player hurted!");
             if(canDamage){
-                anim.SetTrigger("atack"); 
                 audio.PlayOneShot(SFX_playerHurt); 
+                anim.SetTrigger("atack"); 
                 itemStat.UseItem(); 
                 StartCoroutine(InvulnerableTime()); 
             }
