@@ -54,6 +54,7 @@ public class Shooting : MonoBehaviour
                     camera.GetComponent<ScreenShake>().start = true; 
                     GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
                     Instantiate(FX_shoot, firePoint.position, firePoint.rotation); 
+                    //bullet.transform.parent = firePoint.transform; 
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>(); 
                     rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse); 
                     fireTime = 0; 
@@ -69,6 +70,7 @@ public class Shooting : MonoBehaviour
                     camera.GetComponent<ScreenShake>().start = true; 
                     GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
                     Instantiate(FX_shoot, firePoint.position, firePoint.rotation); 
+                    //bullet.transform.parent = firePoint.transform; 
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>(); 
                     rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse); 
                     fireTime = 0; 

@@ -96,13 +96,13 @@ public class Enemy_A : MonoBehaviour
 
     void MoveRight(){
         movingHorizontal = true; 
-        localScale.x = 1; 
+        localScale.x = Math.Abs(localScale.x);  
         transform.localScale = localScale; 
         rb.velocity = new Vector2(localScale.x * (horizontalSpeed + level), rb.velocity.y); 
     }
     void MoveLeft(){
         movingHorizontal = false; 
-        localScale.x = -1; 
+        localScale.x = Math.Abs(localScale.x) * -1; 
         transform.localScale = localScale; 
         rb.velocity = new Vector2(localScale.x * (horizontalSpeed + level), rb.velocity.y); 
     }

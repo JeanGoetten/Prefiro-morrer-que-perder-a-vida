@@ -1942,7 +1942,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3898112688826550864
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1959,7 +1959,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!210 &4031004590926074023
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -2163,12 +2163,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalSpeed: 1
   verticalSpeed: 1
-  followSpeed: 0.5
+  followSpeed: 0.1
   leftPoint: 23
   rightPoint: 59
   UPPoint: 40
   DownPoint: 13
-  level: 1.1000001
+  level: 0.3
   timeToRespawn: 1
   timeAfterFXSummon: 0
   damageCooldownTime: 2
