@@ -6,7 +6,7 @@ public class CursorController : MonoBehaviour
 {
     public Texture2D cursorDefaultTexture;
     public Texture2D cursor_01Texture;
-    public GameObject hotSpot;
+    public Vector3 hotSpot;
 
     private void Start() {
         CustomCursor(); 
@@ -21,9 +21,9 @@ public class CursorController : MonoBehaviour
         TargetCursor(); 
     }
     public void CustomCursor(){
-        Cursor.SetCursor(cursorDefaultTexture, hotSpot.transform.position, CursorMode.Auto);
+        Cursor.SetCursor(cursorDefaultTexture, hotSpot, CursorMode.Auto);
     }
      public void TargetCursor(){
-        Cursor.SetCursor(cursor_01Texture, hotSpot.transform.position, CursorMode.Auto);
+        Cursor.SetCursor(cursor_01Texture, hotSpot, CursorMode.Auto);
     }
 }

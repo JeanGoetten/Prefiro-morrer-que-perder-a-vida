@@ -526,7 +526,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &506230295
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -543,7 +543,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &667418852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,25 +2075,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1825991422}
     m_Modifications:
-    - target: {fileID: 5379105628277246184, guid: 7517c2ba443d49841a42921f597e433e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379105628277246184, guid: 7517c2ba443d49841a42921f597e433e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5379105628476747312, guid: 7517c2ba443d49841a42921f597e433e,
         type: 3}
       propertyPath: m_Name
       value: LoadingScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379105628476747312, guid: 7517c2ba443d49841a42921f597e433e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5379105628476747313, guid: 7517c2ba443d49841a42921f597e433e,
         type: 3}
@@ -2200,27 +2185,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5379105628700030178, guid: 7517c2ba443d49841a42921f597e433e,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379105628700030178, guid: 7517c2ba443d49841a42921f597e433e,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: e434f53a8afd0db4893329043d4c0243,
-        type: 2}
-    - target: {fileID: 5379105628700030178, guid: 7517c2ba443d49841a42921f597e433e,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379105628700030178, guid: 7517c2ba443d49841a42921f597e433e,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -974632087344521184, guid: e434f53a8afd0db4893329043d4c0243,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7517c2ba443d49841a42921f597e433e, type: 3}

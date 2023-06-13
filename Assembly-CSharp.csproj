@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\FX\FX_SummonCircleController.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StatModifier.cs" />
      <Compile Include="Assets\Scripts\Bag\Pickup.cs" />
+     <Compile Include="Assets\Scripts\Mimic\CursorChange.cs" />
      <Compile Include="Assets\Scripts\Items\Weapon\WeaponController.cs" />
      <Compile Include="Assets\Scripts\Adventure\Obstacle_1.cs" />
      <Compile Include="Assets\Scripts\Camera\PlayerTriggerPosition.cs" />
