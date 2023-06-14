@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 145788906}
   - component: {fileID: 145788905}
   m_Layer: 5
-  m_Name: Btn_New
+  m_Name: Btn_Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1250,7 +1250,7 @@ GameObject:
   - component: {fileID: 1322465178}
   - component: {fileID: 1322465177}
   m_Layer: 5
-  m_Name: Btn_Options
+  m_Name: Btn_Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1323,7 +1323,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 491616552}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: QuitTheGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

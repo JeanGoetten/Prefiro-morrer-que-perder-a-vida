@@ -34,4 +34,7 @@ public class LoadScene : MonoBehaviour
             yield return null;  
         }   
     }
+    public void QuitTheGame(){
+        Application.Quit();
+    }
 }

@@ -32,7 +32,7 @@ public class Enemy_A : MonoBehaviour
     public GameObject FX_toDie; 
     public GameObject FX_impact; 
 
-    Animator anim; 
+    public Animator anim; 
     public float spawnAnimationTime = 0.1f; 
     private float spawnAnimationTimeControll; 
 
@@ -46,8 +46,6 @@ public class Enemy_A : MonoBehaviour
         itemStat = GetComponent<ItemStat>(); 
 
         canDamage = true; 
-
-        anim = GetComponent<Animator>(); 
 
         spawned = false; 
 
