@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b2ccf1c908f9146b2960042c8ba0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SFX_clipToDie: {fileID: 8300000, guid: 53fad1d6eb4d5d746b81c1409a51828a, type: 3}
+  SFX_clipToDie: {fileID: 8300000, guid: 3fe43100e4ce40f45b06bde559671a0b, type: 3}
   SFX_Time: 0
   manualTime: 0.5
 --- !u!95 &5349853218045682201

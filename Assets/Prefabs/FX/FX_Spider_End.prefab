@@ -3028,6 +3028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b2ccf1c908f9146b2960042c8ba0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SFX_clipToDie: {fileID: 8300000, guid: 20d8f8f7209b00641a8e82bbda674ee4, type: 3}
+  SFX_clipToDie: {fileID: 8300000, guid: 4db2f11423f7ca042af93d497559bd7a, type: 3}
   SFX_Time: 0
   manualTime: 2
