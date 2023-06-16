@@ -2168,14 +2168,14 @@ MonoBehaviour:
   rightPoint: 59
   UPPoint: 40
   DownPoint: 13
-  level: 0.1
+  level: 0
   timeToRespawn: 1
   timeAfterFXSummon: 0
   damageCooldownTime: 2
   audio: {fileID: 4031004590926073947}
   SFX_playerHurt: {fileID: 8300000, guid: e526754462692414582f17353386bbd3, type: 3}
   SFX_atack: {fileID: 8300000, guid: 05020e59cfccab64b947dff906989db7, type: 3}
-  SFX_chase: {fileID: 8300000, guid: 63d2ba0e1ccbccd47998722ba43f8fa1, type: 3}
+  SFX_chase: {fileID: 8300000, guid: 86b3ceb73d026a144ba282f693cb5c6d, type: 3}
   FX_toDie: {fileID: 8600637606580758923, guid: c8dd136bbc136e24bad1e31be9a21fb5,
     type: 3}
   FX_impact: {fileID: 590191178054637354, guid: 11c632932cb94e142a5e5d9d5b6c6861,

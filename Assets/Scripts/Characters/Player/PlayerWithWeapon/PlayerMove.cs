@@ -5,17 +5,24 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     //movment variables
-    public float speed; 
+    private float speed; 
     Rigidbody2D rb; 
 
     private float animationSpeed; 
 
     public Animator characterAnimator; 
 
+    private StatsPlayer statsPlayer; 
+
     void Start()
     {
         
         rb = GetComponent<Rigidbody2D>(); 
+
+        statsPlayer = GetComponent<StatsPlayer>(); 
+
+        speed = statsPlayer.speed.Value; 
+
     }
 
     void Update()

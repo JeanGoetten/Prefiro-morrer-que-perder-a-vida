@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemiesSpawnController : MonoBehaviour
 {
+    public bool randomMode = true; 
     public float x_RightLimit;
     public float x_LeftLimit;
     public float y_UpLimit;  
@@ -17,11 +19,14 @@ public class EnemiesSpawnController : MonoBehaviour
     public float levelUpIncrease = 0.1f; 
     // Options for first Spawn 
     public bool autoFirstSpawn = false; 
-    public int autoEnemiesAmount = 0; 
+    public int autoEnemiesAmount = 6; 
 
     public GameObject FX_SummounCircle; 
 
     public List<GameObject> enemiesList; 
+
+    private GameObject[] enemiesAlive; 
+    private bool spawnControl; 
 
     private void Start() {
 
@@ -35,11 +40,24 @@ public class EnemiesSpawnController : MonoBehaviour
                 SpawNewEnemy(); 
             }
         }
+        spawnControl = true; 
     }
 
     private void Update(){
-        if(enemyKilled){
-            SpawNewEnemy(); 
+        enemiesAlive = GameObject.FindGameObjectsWithTag("Enemy");
+        if(randomMode){
+            if(enemiesAlive.Length < autoEnemiesAmount && spawnControl){
+                spawnControl = false; 
+                StartCoroutine(SpawnEnemyRandom()); 
+                Debug.Log("spawned"); 
+            }else{
+                
+                //Debug.Log(enemiesAlive.Length); 
+            }
+        }else{
+            if(enemyKilled){
+                SpawNewEnemy(); 
+            }
         }
     }
     public void SpawNewEnemy(){
@@ -64,7 +82,7 @@ public class EnemiesSpawnController : MonoBehaviour
 
         // reset 'enemy killed moment' 
         enemyKilled = false; 
-        Debug.Log(bodyCount + " kill");
+        //Debug.Log(bodyCount + " kill");
     }
 
     void EnemyStatsModifier(){
@@ -73,8 +91,8 @@ public class EnemiesSpawnController : MonoBehaviour
 
     private IEnumerator SpawnWithTime(){
         // Build random coordinates for spawn 
-        float x = Random.Range(x_LeftLimit, x_RightLimit); 
-        float y = Random.Range(y_DownLimit, y_UpLimit); 
+        float x = UnityEngine.Random.Range(x_LeftLimit, x_RightLimit); 
+        float y = UnityEngine.Random.Range(y_DownLimit, y_UpLimit); 
 
         yield return new WaitForSeconds(enemiesList[waveCount].GetComponent<Enemy_A>().timeToRespawn);
 
@@ -82,4 +100,21 @@ public class EnemiesSpawnController : MonoBehaviour
         yield return new WaitForSeconds(enemiesList[waveCount].GetComponent<Enemy_A>().timeAfterFXSummon);
         Instantiate(enemiesList[waveCount], new Vector3(x, y, 0), Quaternion.identity);
     } 
+    private IEnumerator SpawnEnemyRandom(){
+        if(bodyCount == bodyCountToFirstNewWave){
+            autoEnemiesAmount++; 
+            bodyCountToFirstNewWave = bodyCountToFirstNewWave + newWaveEvery; 
+        }
+        float x = UnityEngine.Random.Range(x_LeftLimit, x_RightLimit); 
+        float y = UnityEngine.Random.Range(y_DownLimit, y_UpLimit); 
+
+        yield return new WaitForSeconds(0.1f);
+
+        Instantiate(FX_SummounCircle, new Vector3(x, y, 0), Quaternion.identity);
+        yield return new WaitForSeconds(.5f);
+        int randomEnemy = UnityEngine.Random.Range(0, enemiesList.Count); 
+        Instantiate(enemiesList[randomEnemy], new Vector3(x, y, 0), Quaternion.identity);
+
+        spawnControl = true; 
+    }
 }

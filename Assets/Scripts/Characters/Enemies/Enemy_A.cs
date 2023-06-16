@@ -168,11 +168,11 @@ public class Enemy_A : MonoBehaviour
                 Vector3 velocity = (targetPos - transform.position) * followSpeed;
                 transform.position = Vector3.SmoothDamp (transform.position, targetPos, ref velocity, 1.0f, Time.deltaTime);
 
-                if(other.gameObject.transform.position.x <= transform.position.x + 2f){
-                    MoveLeft(); 
+                if(other.gameObject.transform.position.x <= transform.position.x){
+                    StartCoroutine(LeftFlipPlayerFollow()); 
                     //Debug.Log("player à esquerda");
-                }else if(other.gameObject.transform.position.x > transform.position.x - 2f){
-                    MoveRight(); 
+                }else if(other.gameObject.transform.position.x > transform.position.x){
+                    StartCoroutine(RightFlipPlayerFollow()); 
                     //Debug.Log("player à direita");
                 }else{
                     //MoveRight(); 
@@ -192,5 +192,13 @@ public class Enemy_A : MonoBehaviour
         canDamage = false; 
         yield return new WaitForSeconds(damageCooldownTime); 
         canDamage = true; 
+    }
+    IEnumerator LeftFlipPlayerFollow(){
+        yield return new WaitForSeconds(.3f); 
+        MoveLeft(); 
+    }
+    IEnumerator RightFlipPlayerFollow(){
+        yield return new WaitForSeconds(.3f); 
+        MoveRight(); 
     }
 }

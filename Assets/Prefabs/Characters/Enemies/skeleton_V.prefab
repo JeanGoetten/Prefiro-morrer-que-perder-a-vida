@@ -531,7 +531,7 @@ MonoBehaviour:
   rightPoint: 63.5
   UPPoint: 40.78
   DownPoint: 9.24
-  level: 0.1
+  level: 0
   timeToRespawn: 1
   timeAfterFXSummon: 0.5
   damageCooldownTime: 2

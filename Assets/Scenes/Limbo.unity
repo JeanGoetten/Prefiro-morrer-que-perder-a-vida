@@ -911,7 +911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310921875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8, y: 0, z: 0}
+  m_LocalPosition: {x: -4.42, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2139,6 +2139,8 @@ MonoBehaviour:
   - {fileID: 3716564417899462037, guid: a4a5059d879113b47b86f7d78e79dbef, type: 3}
   - {fileID: 3080370501953228361, guid: 0efd79c3e8e57c7478f0cd447ec104cf, type: 3}
   - {fileID: 1002169615228795003, guid: 7f2e20f16d134dd45b6fc5e0351c64cd, type: 3}
+  - {fileID: 2832322978324394178, guid: 841b5b7f94451eb49acdd509e51ab464, type: 3}
+  - {fileID: 6812317424981313449, guid: e01c04d5d505d3a40997b8253452cf6b, type: 3}
 --- !u!1 &580707234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,6 +4007,7 @@ GameObject:
   - component: {fileID: 1261361061}
   - component: {fileID: 1261361060}
   - component: {fileID: 1261361063}
+  - component: {fileID: 1261361064}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4137,7 +4140,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d5191c87c5208a64c8735fb9a9336509, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8c643cea53551dc499fa4943154ce54b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4223,6 +4226,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1261361064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261361059}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e512b9fd2f4b484db3736faef092851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTarget: {fileID: 1809188270}
+  moveSpeed: 5
 --- !u!1 &1264026818
 GameObject:
   m_ObjectHideFlags: 0
@@ -5424,6 +5441,8 @@ MonoBehaviour:
   - {fileID: 3716564417899462038, guid: a4a5059d879113b47b86f7d78e79dbef, type: 3}
   - {fileID: 4142775445403637792, guid: 0efd79c3e8e57c7478f0cd447ec104cf, type: 3}
   - {fileID: 278215768391162291, guid: 7f2e20f16d134dd45b6fc5e0351c64cd, type: 3}
+  - {fileID: 2988822862796378378, guid: 841b5b7f94451eb49acdd509e51ab464, type: 3}
+  - {fileID: 5818147873062119009, guid: e01c04d5d505d3a40997b8253452cf6b, type: 3}
   itemSpawnAvaiable: 1
   SFX_Shot: {fileID: 0}
 --- !u!114 &1569707776
@@ -7136,7 +7155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1710907157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7812,7 +7831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5202cc15e9b94e74f9dba68f7f37e517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
   characterAnimator: {fileID: 1924426586}
 --- !u!114 &1809188265
 MonoBehaviour:
@@ -8611,6 +8629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfaee3f6f5f00144a9d79e76887772b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomMode: 1
   x_RightLimit: 60
   x_LeftLimit: 24
   y_UpLimit: 40
