@@ -6,24 +6,35 @@ using TMPro;
 
 public class ScoreController : MonoBehaviour
 {
-     public TMP_Text scoreText;  
-     public TMP_Text scoreHighText;  
+   public TMP_Text scoreText;  
+   public TMP_Text scoreHighText;  
 
-     private StatsPlayer statsPlayer; 
+   private StatsPlayer statsPlayer; 
 
-     public static float highScore = 0; 
+   public static float highScore = 0; 
 
-     private void Start() {
-        statsPlayer = GameObject.FindWithTag("Player").GetComponent<StatsPlayer>(); 
-     }
+   Animator anim; 
 
-     private void Update() {
-         scoreText.text =  statsPlayer.score.Value.ToString(); 
+   private void Start() {
+      statsPlayer = GameObject.FindWithTag("Player").GetComponent<StatsPlayer>(); 
+      anim = GetComponent<Animator>(); 
+   }
 
-         if(statsPlayer.score.Value > highScore){
-            highScore = statsPlayer.score.Value; 
-         }
-         scoreHighText.text = highScore.ToString(); 
-     }
+   private void Update() {
+      if(highScore <= 0){
+         scoreHighText.enabled = false; 
+      }else{
+         scoreHighText.enabled = true; 
+      }
+       
+      scoreText.text =  statsPlayer.score.Value.ToString(); 
+
+      if(statsPlayer.score.Value > highScore){
+         scoreHighText.color = Color.yellow; 
+         anim.SetTrigger("popup"); 
+         highScore = statsPlayer.score.Value; 
+      }
+      scoreHighText.text = highScore.ToString(); 
+   }
 }
 

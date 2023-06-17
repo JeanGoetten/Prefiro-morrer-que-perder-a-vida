@@ -118,6 +118,7 @@ public class Enemy_A : MonoBehaviour
         {
             //Debug.Log("Enemy bulleted!");
             EnemiesSpawnController.bodyCount++; 
+            EnemiesSpawnController.bodyCountLocal++; 
             EnemiesSpawnController.enemyKilled = true;  
             itemStat.DropItem(); 
 
@@ -183,13 +184,13 @@ public class Enemy_A : MonoBehaviour
         }
     }
     void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.tag == "Bullet")
-        {
-            Destroy(this.gameObject); 
-        }
         if(other.gameObject.tag == "Player")
         {
             audio.PlayOneShot(SFX_chase); 
+        }
+        if(other.gameObject.tag == "DeathWall")
+        {
+            Destroy(this.gameObject); 
         }
     }
     IEnumerator InvulnerableTime(){

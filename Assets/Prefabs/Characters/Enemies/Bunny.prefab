@@ -268,8 +268,8 @@ MonoBehaviour:
   damageCooldownTime: 1
   audio: {fileID: 4522157743823755713}
   SFX_playerHurt: {fileID: 8300000, guid: e526754462692414582f17353386bbd3, type: 3}
-  SFX_atack: {fileID: 0}
-  SFX_chase: {fileID: 0}
+  SFX_atack: {fileID: 8300000, guid: 3fe43100e4ce40f45b06bde559671a0b, type: 3}
+  SFX_chase: {fileID: 8300000, guid: 3fe43100e4ce40f45b06bde559671a0b, type: 3}
   FX_toDie: {fileID: 1908530457019813427, guid: 58f7041dd3c5beb458e3bc243e17cb43,
     type: 3}
   FX_impact: {fileID: 590191178054637354, guid: 11c632932cb94e142a5e5d9d5b6c6861,

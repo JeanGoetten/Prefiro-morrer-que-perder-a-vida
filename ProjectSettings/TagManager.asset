@@ -12,6 +12,7 @@ TagManager:
   - Adventure
   - Obstacle_1
   - Mimic
+  - DeathWall
   layers:
   - Default
   - TransparentFX

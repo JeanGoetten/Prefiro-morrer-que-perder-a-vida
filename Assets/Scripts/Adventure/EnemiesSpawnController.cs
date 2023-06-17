@@ -11,10 +11,12 @@ public class EnemiesSpawnController : MonoBehaviour
     public float y_UpLimit;  
     public float y_DownLimit; 
     public static int bodyCount = 0; 
+    public static int bodyCountLocal = 0; 
     public static bool enemyKilled; 
     private int waveCount = 0; 
-    public int bodyCountToFirstNewWave = 6; 
+    //public int bodyCountToFirstNewWave = 6; 
     public int newWaveEvery = 6; 
+    public int moreEnemyPerWave = 1; 
     private float levelUpAmout = 0f; 
     public float levelUpIncrease = 0.1f; 
     // Options for first Spawn 
@@ -36,9 +38,15 @@ public class EnemiesSpawnController : MonoBehaviour
 
     private bool timeToWaveDisplay; 
 
+    public GameObject go_killThemAll; 
+    AudioSource audioSource; 
+
+    public AudioClip sfx_killThemAll; 
+
     private void Start() {
 
         bodyCount = 0; 
+        bodyCountLocal = 0; 
         levelUpAmout = 0f; 
         waveCount = 0; 
 
@@ -50,6 +58,10 @@ public class EnemiesSpawnController : MonoBehaviour
         }
         spawnControl = true; 
         timeToWaveDisplay = false; 
+
+        audioSource = GetComponent<AudioSource>(); 
+
+        go_killThemAll.SetActive(false); 
     }
 
     private void Update(){
@@ -71,9 +83,12 @@ public class EnemiesSpawnController : MonoBehaviour
     }
     public void SpawNewEnemy(){
         // Level controller
-        if(bodyCount == bodyCountToFirstNewWave){
+        if(bodyCountLocal >= newWaveEvery){
             waveCount++; 
-            bodyCountToFirstNewWave = bodyCountToFirstNewWave + newWaveEvery; 
+            bodyCountLocal = 0; 
+            newWaveEvery = newWaveEvery + moreEnemyPerWave; 
+            txt_waveCount.text = newWave.ToString(); 
+            go_waveCount.SetActive(true); 
             StartCoroutine(CD_DisplayWaveCount()); 
         }
 
@@ -111,16 +126,19 @@ public class EnemiesSpawnController : MonoBehaviour
         Instantiate(enemiesList[waveCount], new Vector3(x, y, 0), Quaternion.identity);
     } 
     private IEnumerator SpawnEnemyRandom(){
-        if(bodyCount == bodyCountToFirstNewWave){
+        if(bodyCountLocal >= newWaveEvery){
             autoEnemiesAmount++; 
-            bodyCountToFirstNewWave = bodyCountToFirstNewWave + newWaveEvery; 
+            bodyCountLocal = 0; 
             newWave++; 
+            newWaveEvery = newWaveEvery + moreEnemyPerWave; 
             txt_waveCount.text = newWave.ToString(); 
             go_waveCount.SetActive(true); 
             StartCoroutine(CD_DisplayWaveCount()); 
             //animatorWaveCount.SetTrigger("show"); 
             Debug.Log("wave " + newWave); 
         }
+        Debug.Log("bodyCountLocal " + bodyCountLocal); 
+        Debug.Log("newWaveEvery " + newWaveEvery); 
         float x = UnityEngine.Random.Range(x_LeftLimit, x_RightLimit); 
         float y = UnityEngine.Random.Range(y_DownLimit, y_UpLimit); 
 
@@ -135,7 +153,10 @@ public class EnemiesSpawnController : MonoBehaviour
     }
     IEnumerator CD_DisplayWaveCount(){
         timeToWaveDisplay = true; 
+        go_killThemAll.SetActive(true); 
+        audioSource.PlayOneShot(sfx_killThemAll); 
         yield return new WaitForSeconds(timeCountShowUP); 
+        go_killThemAll.SetActive(false); 
         go_waveCount.SetActive(false); 
         timeToWaveDisplay = false; 
     }
