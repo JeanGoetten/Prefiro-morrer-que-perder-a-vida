@@ -19,6 +19,16 @@ public class PlayerAction : MonoBehaviour
     public Transform spriteRenderer; 
     public SpriteRenderer weaponSpriteRenderer; 
 
+    [Range(90, 135)]
+    public float maxAngle = 120f; 
+    [Range(45, 90)] 
+    public float minAngle = 60f;  
+    public bool bottomAngleLimit = true; 
+    [Range(-90, -135)]
+    public float maxAngleBottom = -120f; 
+    [Range(-45, -90)] 
+    public float minAngleBottom = -60f;  
+
     private void Awake() {
         aimTransform = transform.Find("Aim"); 
 
@@ -34,10 +44,21 @@ public class PlayerAction : MonoBehaviour
         Vector3 mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition); 
 
         Vector3 aimDirection = (mousePos - transform.position).normalized; 
+        
         float angle = MathF.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg; 
+
+        if(angle > minAngle && angle < maxAngle){
+            angle = minAngle;
+        }
+        if(bottomAngleLimit){
+            if(angle < minAngleBottom && angle > maxAngleBottom){
+                angle = minAngleBottom;
+            }
+        }
+
         aimTransform.eulerAngles = new Vector3(0, 0, angle); 
 
-        //Debug.Log(angle);
+        Debug.Log(aimDirection);
         // flipa o srpite do personagem de acordo com o ângulo 
         if(angle < 90 && angle > -90){
             spriteRenderer.localScale = new Vector3(1, 1, 1); 
