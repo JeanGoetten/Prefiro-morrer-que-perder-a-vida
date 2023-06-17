@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro; 
 public class EnemiesSpawnController : MonoBehaviour
 {
     public bool randomMode = true; 
@@ -27,6 +27,14 @@ public class EnemiesSpawnController : MonoBehaviour
 
     private GameObject[] enemiesAlive; 
     private bool spawnControl; 
+    int newWave = 0; 
+
+    public TMP_Text txt_waveCount;  
+    public Animator animatorWaveCount; 
+    public GameObject go_waveCount; 
+    public float timeCountShowUP = 0.1f; 
+
+    private bool timeToWaveDisplay; 
 
     private void Start() {
 
@@ -41,21 +49,22 @@ public class EnemiesSpawnController : MonoBehaviour
             }
         }
         spawnControl = true; 
+        timeToWaveDisplay = false; 
     }
 
     private void Update(){
         enemiesAlive = GameObject.FindGameObjectsWithTag("Enemy");
-        if(randomMode){
+        if(randomMode && !timeToWaveDisplay){
             if(enemiesAlive.Length < autoEnemiesAmount && spawnControl){
                 spawnControl = false; 
                 StartCoroutine(SpawnEnemyRandom()); 
-                Debug.Log("spawned"); 
+                //Debug.Log("spawned"); 
             }else{
                 
                 //Debug.Log(enemiesAlive.Length); 
             }
         }else{
-            if(enemyKilled){
+            if(enemyKilled && !timeToWaveDisplay){
                 SpawNewEnemy(); 
             }
         }
@@ -65,6 +74,7 @@ public class EnemiesSpawnController : MonoBehaviour
         if(bodyCount == bodyCountToFirstNewWave){
             waveCount++; 
             bodyCountToFirstNewWave = bodyCountToFirstNewWave + newWaveEvery; 
+            StartCoroutine(CD_DisplayWaveCount()); 
         }
 
         // Make the last enemy the 'terror' enemy 
@@ -104,6 +114,12 @@ public class EnemiesSpawnController : MonoBehaviour
         if(bodyCount == bodyCountToFirstNewWave){
             autoEnemiesAmount++; 
             bodyCountToFirstNewWave = bodyCountToFirstNewWave + newWaveEvery; 
+            newWave++; 
+            txt_waveCount.text = newWave.ToString(); 
+            go_waveCount.SetActive(true); 
+            StartCoroutine(CD_DisplayWaveCount()); 
+            //animatorWaveCount.SetTrigger("show"); 
+            Debug.Log("wave " + newWave); 
         }
         float x = UnityEngine.Random.Range(x_LeftLimit, x_RightLimit); 
         float y = UnityEngine.Random.Range(y_DownLimit, y_UpLimit); 
@@ -116,5 +132,11 @@ public class EnemiesSpawnController : MonoBehaviour
         Instantiate(enemiesList[randomEnemy], new Vector3(x, y, 0), Quaternion.identity);
 
         spawnControl = true; 
+    }
+    IEnumerator CD_DisplayWaveCount(){
+        timeToWaveDisplay = true; 
+        yield return new WaitForSeconds(timeCountShowUP); 
+        go_waveCount.SetActive(false); 
+        timeToWaveDisplay = false; 
     }
 }

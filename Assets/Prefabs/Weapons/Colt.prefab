@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08259cae9138704fb1bd332cd064e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: Shotgun
+  model: Colt
   freeFire: 0
   force: 30
   damage: 3

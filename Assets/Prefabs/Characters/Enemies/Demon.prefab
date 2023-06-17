@@ -2169,8 +2169,8 @@ MonoBehaviour:
   UPPoint: 40
   DownPoint: 13
   level: 0
-  timeToRespawn: 1
-  timeAfterFXSummon: 0
+  timeToRespawn: 1.5
+  timeAfterFXSummon: 0.1
   damageCooldownTime: 2
   audio: {fileID: 4031004590926073947}
   SFX_playerHurt: {fileID: 8300000, guid: e526754462692414582f17353386bbd3, type: 3}
@@ -2181,7 +2181,7 @@ MonoBehaviour:
   FX_impact: {fileID: 590191178054637354, guid: 11c632932cb94e142a5e5d9d5b6c6861,
     type: 3}
   anim: {fileID: 3898112688826550864}
-  spawnAnimationTime: 1
+  spawnAnimationTime: 0.5
 --- !u!1 &7684593078406545755
 GameObject:
   m_ObjectHideFlags: 0

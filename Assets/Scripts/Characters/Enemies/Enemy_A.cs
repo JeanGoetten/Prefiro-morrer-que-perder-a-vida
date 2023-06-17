@@ -183,6 +183,10 @@ public class Enemy_A : MonoBehaviour
         }
     }
     void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag == "Bullet")
+        {
+            Destroy(this.gameObject); 
+        }
         if(other.gameObject.tag == "Player")
         {
             audio.PlayOneShot(SFX_chase); 
