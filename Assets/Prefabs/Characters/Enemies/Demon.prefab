@@ -2183,7 +2183,7 @@ MonoBehaviour:
   FX_impact: {fileID: 649365548317274533, guid: a00a8960ee01c22469c120d4bd6b39fd,
     type: 3}
   anim: {fileID: 3898112688826550864}
-  spawnAnimationTime: 0.5
+  spawnAnimationTime: 0.7
 --- !u!1 &7684593078406545755
 GameObject:
   m_ObjectHideFlags: 0

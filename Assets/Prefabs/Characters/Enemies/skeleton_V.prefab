@@ -535,6 +535,8 @@ MonoBehaviour:
   level: 0
   timeToRespawn: 1
   timeAfterFXSummon: 0.5
+  collider: {fileID: 5077894851144023069}
+  trigger: {fileID: 5077894851144023068}
   damageCooldownTime: 2
   audio: {fileID: 1029710990}
   SFX_playerHurt: {fileID: 8300000, guid: e526754462692414582f17353386bbd3, type: 3}
@@ -545,7 +547,7 @@ MonoBehaviour:
   FX_impact: {fileID: 649365548317274533, guid: a00a8960ee01c22469c120d4bd6b39fd,
     type: 3}
   anim: {fileID: 5077894851144023059}
-  spawnAnimationTime: 1
+  spawnAnimationTime: 1.5
 --- !u!114 &977948000
 MonoBehaviour:
   m_ObjectHideFlags: 0

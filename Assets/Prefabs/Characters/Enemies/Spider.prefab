@@ -2645,6 +2645,8 @@ MonoBehaviour:
   level: 0
   timeToRespawn: 2
   timeAfterFXSummon: 0.3
+  collider: {fileID: 3408207542126749665}
+  trigger: {fileID: 3408207542126749668}
   damageCooldownTime: 0.75
   audio: {fileID: 3408207542126749666}
   SFX_playerHurt: {fileID: 8300000, guid: e526754462692414582f17353386bbd3, type: 3}

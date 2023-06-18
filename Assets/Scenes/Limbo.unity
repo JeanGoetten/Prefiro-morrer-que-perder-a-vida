@@ -8582,7 +8582,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5202cc15e9b94e74f9dba68f7f37e517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backSpeedTax: 0.75
   characterAnimator: {fileID: 1924426586}
+  characterSprite: {fileID: 1924426585}
 --- !u!114 &1809188265
 MonoBehaviour:
   m_ObjectHideFlags: 0
