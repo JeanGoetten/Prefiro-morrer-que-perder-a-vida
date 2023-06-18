@@ -3633,7 +3633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8124,6 +8124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterAnimator: {fileID: 1924426586}
+  characterSprite: {fileID: 1924426585}
 --- !u!114 &1809188265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8292,6 +8293,11 @@ MonoBehaviour:
   startDashTime: 0
   spriteRenderer: {fileID: 1924426585}
   weaponSpriteRenderer: {fileID: 577763821}
+  maxAngle: 120
+  minAngle: 60
+  bottomAngleLimit: 0
+  maxAngleBottom: -120
+  minAngleBottom: -60
 --- !u!114 &1809188272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8927,8 +8933,8 @@ MonoBehaviour:
   x_LeftLimit: 24
   y_UpLimit: 40
   y_DownLimit: 12.6
-  bodyCountToFirstNewWave: 25
   newWaveEvery: 25
+  moreEnemyPerWave: 1
   levelUpIncrease: 0.1
   autoFirstSpawn: 1
   autoEnemiesAmount: 5

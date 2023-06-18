@@ -6,11 +6,14 @@ public class PlayerMove : MonoBehaviour
 {
     //movment variables
     private float speed; 
+    [Range(0, 1)] 
+    public float backSpeedTax = 0.75f; 
     Rigidbody2D rb; 
 
-    private float animationSpeed; 
+    public static float animationSpeed; 
 
     public Animator characterAnimator; 
+    public Transform characterSprite; 
 
     private StatsPlayer statsPlayer; 
 
@@ -33,15 +36,50 @@ public class PlayerMove : MonoBehaviour
 
         rb.velocity = new Vector3(horizontal * speed, vertical * speed, 0); 
 
-        if(Mathf.Abs(rb.velocity.x) > 0){
-            animationSpeed = Mathf.Abs(rb.velocity.x);
+        // if(Mathf.Abs(rb.velocity.x) > 0){
+        //     animationSpeed = Mathf.Abs(rb.velocity.x);
+        // }
+        // else if(Mathf.Abs(rb.velocity.y) > 0){
+        //     animationSpeed = Mathf.Abs(rb.velocity.y);
+        // }else{
+        //     animationSpeed = 0; 
+        // }
+
+        if(characterSprite.localScale.x > 0 && horizontal > 0){
+            characterAnimator.SetBool("backwalking", false); 
+            characterAnimator.SetBool("walking", true); 
+
+            speed = statsPlayer.speed.Value; 
+            characterAnimator.speed = 1f; 
         }
-        else if(Mathf.Abs(rb.velocity.y) > 0){
-            animationSpeed = Mathf.Abs(rb.velocity.y);
+        else if(characterSprite.localScale.x > 0 && horizontal < 0){
+            characterAnimator.SetBool("walking", false); 
+            characterAnimator.SetBool("backwalking", true); 
+
+            speed = statsPlayer.speed.Value * backSpeedTax; 
+            characterAnimator.speed = 1f * backSpeedTax; 
+        }
+        else if(characterSprite.localScale.x < 0 && horizontal > 0){
+            characterAnimator.SetBool("walking", false); 
+            characterAnimator.SetBool("backwalking", true); 
+            
+            speed = statsPlayer.speed.Value * backSpeedTax; 
+            characterAnimator.speed = 1f * backSpeedTax; 
+        }
+        else if(characterSprite.localScale.x < 0 && horizontal < 0){
+            characterAnimator.SetBool("backwalking", false); 
+            characterAnimator.SetBool("walking", true); 
+            
+            speed = statsPlayer.speed.Value; 
+            characterAnimator.speed = 1f; 
         }else{
-            animationSpeed = 0; 
+            characterAnimator.SetBool("backwalking", false); 
+            characterAnimator.SetBool("walking", false); 
+
+            characterAnimator.speed = 1f; 
         }
-        //Debug.Log(animationSpeed);
-        characterAnimator.SetFloat("walking", animationSpeed); 
+        Debug.Log(transform.localScale.x);
     }
 }
+
+

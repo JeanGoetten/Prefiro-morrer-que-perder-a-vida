@@ -147,6 +147,11 @@ public class Enemy_A : MonoBehaviour
             anim.SetTrigger("atack"); 
             audio.PlayOneShot(SFX_playerHurt); 
             itemStat.UseItem(); 
+
+            Animator playerAnimator = other.gameObject.transform.GetChild(1).GetComponent<Animator>(); 
+            playerAnimator.SetTrigger("hurt"); 
+
+            StartCoroutine(InvulnerableTime()); 
         }
     }
     private void OnCollisionStay2D(Collision2D other)
@@ -157,6 +162,10 @@ public class Enemy_A : MonoBehaviour
                 anim.SetTrigger("atack"); 
                 audio.PlayOneShot(SFX_playerHurt); 
                 itemStat.UseItem(); 
+
+                Animator playerAnimator = other.gameObject.transform.GetChild(1).GetComponent<Animator>(); 
+                playerAnimator.SetTrigger("hurt"); 
+
                 StartCoroutine(InvulnerableTime()); 
             }
         }
