@@ -137,8 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93106a98d752a5f45ad0dc0abcfabeb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FX_impact: {fileID: 590191178054637354, guid: 11c632932cb94e142a5e5d9d5b6c6861,
-    type: 3}
+  FX_impact: {fileID: 0}
 --- !u!114 &4253991307768324766
 MonoBehaviour:
   m_ObjectHideFlags: 0

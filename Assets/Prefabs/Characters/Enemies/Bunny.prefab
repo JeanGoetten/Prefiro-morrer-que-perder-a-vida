@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 818111388504768842}
   - component: {fileID: 4522157743823755713}
   - component: {fileID: 4522157743823755726}
+  - component: {fileID: -8909450929803202817}
   - component: {fileID: 818111388504768847}
   - component: {fileID: 4522157743823755724}
   m_Layer: 0
@@ -243,6 +244,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!210 &-8909450929803202817
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818111388504768846}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
 --- !u!114 &818111388504768847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +286,7 @@ MonoBehaviour:
   SFX_chase: {fileID: 8300000, guid: 3fe43100e4ce40f45b06bde559671a0b, type: 3}
   FX_toDie: {fileID: 1908530457019813427, guid: 58f7041dd3c5beb458e3bc243e17cb43,
     type: 3}
-  FX_impact: {fileID: 590191178054637354, guid: 11c632932cb94e142a5e5d9d5b6c6861,
+  FX_impact: {fileID: 649365548317274533, guid: a00a8960ee01c22469c120d4bd6b39fd,
     type: 3}
   anim: {fileID: 4522157743823755726}
   spawnAnimationTime: 1

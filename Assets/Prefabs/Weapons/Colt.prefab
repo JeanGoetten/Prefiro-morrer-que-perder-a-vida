@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: Colt
   freeFire: 0
-  force: 30
+  force: 60
   damage: 3
   fireRate: 2
   magazineSize: 5
