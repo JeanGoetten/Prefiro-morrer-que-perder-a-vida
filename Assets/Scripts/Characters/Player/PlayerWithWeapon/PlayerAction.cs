@@ -58,7 +58,7 @@ public class PlayerAction : MonoBehaviour
 
         aimTransform.eulerAngles = new Vector3(0, 0, angle); 
 
-        Debug.Log(aimDirection);
+        //Debug.Log(aimDirection);
         // flipa o srpite do personagem de acordo com o ângulo 
         if(angle < 90 && angle > -90){
             spriteRenderer.localScale = new Vector3(1, 1, 1); 
