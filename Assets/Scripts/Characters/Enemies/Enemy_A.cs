@@ -18,6 +18,8 @@ public class Enemy_A : MonoBehaviour
 
     Vector3 localScale; 
     Rigidbody2D rb; 
+    new  public Collider2D collider; 
+    public Collider2D trigger; 
 
     private ItemStat itemStat; 
 
@@ -42,6 +44,9 @@ public class Enemy_A : MonoBehaviour
         localScale = transform.localScale; 
 
         rb = GetComponent<Rigidbody2D>(); 
+        rb.isKinematic = false;
+        collider.enabled = false; 
+        trigger.enabled = false; 
 
         itemStat = GetComponent<ItemStat>(); 
 
@@ -59,6 +64,9 @@ public class Enemy_A : MonoBehaviour
     void Update()
     {
         if(spawnAnimationTimeControll >= spawnAnimationTime){
+            rb.isKinematic = true;
+            collider.enabled = true; 
+            trigger.enabled = true; 
             spawned = true; 
         }
         if(spawned){
