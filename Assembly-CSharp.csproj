@@ -70,13 +70,13 @@
      <Compile Include="Assets\Scripts\Characters\Player\FXConstroller.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\BulletController.cs" />
      <Compile Include="Assets\Scripts\Items\Weapon\WeaponStats.cs" />
+     <Compile Include="Assets\Scripts\Manager\PassController.cs" />
      <Compile Include="Assets\Scripts\UI\ScoreController.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerWithWeapon\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\CharacterStat.cs" />
      <Compile Include="Assets\Scripts\Mimic\MimicTalk.cs" />
      <Compile Include="Assets\Scripts\Bag\Slot.cs" />
      <Compile Include="Assets\Scripts\Items\ItemStat.cs" />
-     <Compile Include="Assets\Scripts\Manager\PassController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

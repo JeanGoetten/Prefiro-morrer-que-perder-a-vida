@@ -8220,7 +8220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1710907157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8789,7 +8789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life:
-    BaseValue: 1000
+    BaseValue: 200
   power:
     BaseValue: 1
   speed:

@@ -64,10 +64,12 @@ public class Enemy_A : MonoBehaviour
     void Update()
     {
         if(spawnAnimationTimeControll >= spawnAnimationTime){
-            rb.isKinematic = true;
+            rb.bodyType = RigidbodyType2D.Dynamic;
             collider.enabled = true; 
             trigger.enabled = true; 
             spawned = true; 
+        }else{
+
         }
         if(spawned){
             if(transform.position.x > rightPoint){
