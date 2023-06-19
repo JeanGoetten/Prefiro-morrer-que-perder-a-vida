@@ -15,30 +15,42 @@ public class PlayerTriggerPosition : MonoBehaviour
     private bool passTriggred; 
     private bool adventureTriggred; 
 
+
+    public GameObject go_pass; 
+
+    private void Start() {
+        go_pass.SetActive(true); 
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
-            if(other.tag == "Limbo"){
-                
-                limboTriggred = true; 
-                passTriggred = false; 
-                adventureTriggred = false; 
-                //Debug.Log(other.tag);
-            }
-            if(other.tag == "Pass"){
-                
-                limboTriggred = false; 
-                passTriggred = true; 
-                adventureTriggred = false; 
-                //Debug.Log(other.tag);
-            }
-            if(other.tag == "Adventure"){
-                
-                limboTriggred = false; 
-                passTriggred = false; 
-                adventureTriggred = true; 
-                //Debug.Log(other.tag);
-            }
+        if(other.tag == "Limbo"){
             
+            limboTriggred = true; 
+            passTriggred = false; 
+            adventureTriggred = false; 
+            //Debug.Log(other.tag);
+        }
+        if(other.tag == "Pass"){
+            
+            limboTriggred = false; 
+            passTriggred = true; 
+            adventureTriggred = false; 
+            //Debug.Log(other.tag);
+        }
+        if(other.tag == "Adventure"){
+            
+            limboTriggred = false; 
+            passTriggred = false; 
+            adventureTriggred = true; 
+            //Debug.Log(other.tag);
+        }
+            
+    }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.tag == "pass_adventure_trigger"){
+            PassClose(); 
+        }
     }
     private void Update() {
         if(limboTriggred){
@@ -56,5 +68,11 @@ public class PlayerTriggerPosition : MonoBehaviour
                 Vector3 velocity = (targetPos - camera.position) * moveSpeed;
 			    camera.position = Vector3.SmoothDamp(camera.position, targetPos, ref velocity, 1.0f, Time.deltaTime);
         }
+    }
+    public void PassOpen(){
+        go_pass.SetActive(false); 
+    }
+    public void PassClose(){
+        go_pass.SetActive(true); 
     }
 }

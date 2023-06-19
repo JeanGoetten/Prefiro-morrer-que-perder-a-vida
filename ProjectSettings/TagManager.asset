@@ -13,6 +13,7 @@ TagManager:
   - Obstacle_1
   - Mimic
   - DeathWall
+  - pass_adventure_trigger
   layers:
   - Default
   - TransparentFX
