@@ -77,6 +77,10 @@ public class PlayerMove : MonoBehaviour
             characterAnimator.SetBool("walking", false); 
 
             characterAnimator.speed = 1f; 
+
+        }
+        if(Mathf.Abs(rb.velocity.y) > 0){
+            characterAnimator.SetBool("walking", true); 
         }
         Debug.Log(transform.localScale.x);
     }

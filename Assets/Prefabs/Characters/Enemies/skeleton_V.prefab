@@ -534,7 +534,7 @@ MonoBehaviour:
   DownPoint: 10
   level: 0
   timeToRespawn: 2
-  timeAfterFXSummon: 0.25
+  timeAfterFXSummon: 0.7
   collider: {fileID: 5077894851144023069}
   trigger: {fileID: 5077894851144023068}
   damageCooldownTime: 0.5
