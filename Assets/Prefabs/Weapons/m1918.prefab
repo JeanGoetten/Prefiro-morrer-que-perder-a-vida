@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: m1918
-  freeFire: 0
+  freeFire: 1
   force: 70
   damage: 3
-  fireRate: 7
+  fireRate: 2
   magazineSize: 5
   reloadTime: 0.5
   screenShakeForce: 0.5

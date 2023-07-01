@@ -275,7 +275,7 @@ MonoBehaviour:
   UPPoint: 45.8
   DownPoint: 11.68
   level: 0
-  timeToRespawn: 1
+  timeToRespawn: 5
   timeAfterFXSummon: 0.7
   collider: {fileID: 818111388504768842}
   trigger: {fileID: 818111388504768842}
@@ -289,7 +289,7 @@ MonoBehaviour:
   FX_impact: {fileID: 649365548317274533, guid: a00a8960ee01c22469c120d4bd6b39fd,
     type: 3}
   anim: {fileID: 4522157743823755726}
-  spawnAnimationTime: 1
+  spawnAnimationTime: 0.5
 --- !u!114 &4522157743823755724
 MonoBehaviour:
   m_ObjectHideFlags: 0
